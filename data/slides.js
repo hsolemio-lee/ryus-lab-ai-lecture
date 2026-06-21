@@ -761,13 +761,13 @@ FastQC/trim → align/quant → counts
           <p class="kicker">Mention Only</p>
           <h2>나머지는 용도별로 이름만 알아두기</h2>
           <div class="mention-list">
-            <button data-modal="modal-elicit">Elicit</button>
-            <button data-modal="modal-researchrabbit">ResearchRabbit</button>
-            <button data-modal="modal-litmaps">Litmaps</button>
-            <button data-modal="modal-consensus">Consensus</button>
-            <button data-modal="modal-scispace">SciSpace</button>
-            <button data-modal="modal-perplexity">Perplexity</button>
-            <button data-modal="modal-alphafold">AlphaFold Server</button>
+            <button data-modal="modal-elicit"><strong>Elicit</strong><span>질문 기반 Literature Review</span></button>
+            <button data-modal="modal-researchrabbit"><strong>ResearchRabbit</strong><span>Citation Network 탐색</span></button>
+            <button data-modal="modal-litmaps"><strong>Litmaps</strong><span>Literature Map과 Monitoring</span></button>
+            <button data-modal="modal-consensus"><strong>Consensus</strong><span>Claim 근거 빠르게 확인</span></button>
+            <button data-modal="modal-scispace"><strong>SciSpace</strong><span>PDF 읽기와 문단 설명</span></button>
+            <button data-modal="modal-perplexity"><strong>Perplexity</strong><span>출처 기반 Web Research</span></button>
+            <button data-modal="modal-alphafold"><strong>AlphaFold Server</strong><span>Protein Interaction 예측</span></button>
           </div>
         </div>
     `,

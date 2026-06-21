@@ -1446,37 +1446,100 @@ FastQC/trim → align/quant (STAR/Salmon)
   "modal-elicit": {
     kicker: "Mention",
     title: "Elicit",
-    body: "<p>연구 질문 기반 문헌검색과 논문 표 정리에 강한 도구입니다.</p>",
+    body: `
+      <p><strong>Elicit</strong>은 자연어 연구 질문을 넣으면 관련 논문을 찾고, 논문별 핵심 정보를 표 형태로 정리하는 데 강한 literature review 도구입니다.</p>
+      <ul>
+        <li><strong>언제 쓰나:</strong> "X가 Y에 어떤 영향을 주는가?"처럼 empirical evidence를 모아야 할 때 좋습니다.</li>
+        <li><strong>강점:</strong> 후보 논문 검색, abstract 기반 요약, intervention/outcome/sample 같은 항목 추출, systematic review screening 초안 생성.</li>
+        <li><strong>연구실 활용:</strong> journal club 주제를 잡거나, 실험 배경 논문을 빠르게 넓힐 때 출발점으로 씁니다.</li>
+        <li><strong>주의:</strong> 검색 누락과 추출 오류가 있을 수 있으므로 최종 citation, 포함/제외 기준, 본문 근거는 직접 확인해야 합니다.</li>
+      </ul>
+      <p class="modal-note"><a href="https://elicit.com/" target="_blank" rel="noreferrer">elicit.com</a></p>
+    `,
   },
   "modal-researchrabbit": {
     kicker: "Mention",
     title: "ResearchRabbit",
-    body: "<p>관련 논문과 인용 관계를 시각적으로 탐색하는 도구입니다.</p>",
+    body: `
+      <p><strong>ResearchRabbit</strong>은 seed paper를 넣고 관련 논문, 참고문헌, 후속 인용 관계를 시각적으로 탐색하는 citation network 도구입니다.</p>
+      <ul>
+        <li><strong>언제 쓰나:</strong> 이미 중요한 논문 몇 편을 알고 있고, 그 주변의 연구 흐름을 넓히고 싶을 때 좋습니다.</li>
+        <li><strong>강점:</strong> 논문 간 연결 관계, 저자/연도 기반 탐색, 비슷한 논문 추천, collection 기반 literature map.</li>
+        <li><strong>연구실 활용:</strong> "이 논문 이후 어떤 후속 연구가 나왔나?", "이 주제의 중심 논문은 무엇인가?"를 빠르게 확인합니다.</li>
+        <li><strong>주의:</strong> 인용 네트워크가 강한 분야에 유리하고, 최신 preprint나 niche paper는 누락될 수 있습니다.</li>
+      </ul>
+      <p class="modal-note"><a href="https://www.researchrabbit.ai/" target="_blank" rel="noreferrer">researchrabbit.ai</a></p>
+    `,
   },
   "modal-litmaps": {
     kicker: "Mention",
     title: "Litmaps",
-    body: "<p>문헌 지도 작성과 새 논문 모니터링에 유용한 도구입니다.</p>",
+    body: `
+      <p><strong>Litmaps</strong>는 seed paper를 중심으로 citation/references 연결을 지도처럼 만들고, 새 논문을 지속적으로 monitor하는 데 유용한 도구입니다.</p>
+      <ul>
+        <li><strong>언제 쓰나:</strong> 특정 주제의 문헌 지도를 만들고, 시간이 지나도 새 논문을 놓치고 싶지 않을 때 좋습니다.</li>
+        <li><strong>강점:</strong> literature map, citation 기반 발견, paper monitoring, 관련성/연결성 기반 추천.</li>
+        <li><strong>연구실 활용:</strong> 프로젝트 시작 시 핵심 논문 지도를 만들고, 발표 전 최신 논문 업데이트를 확인합니다.</li>
+        <li><strong>주의:</strong> map은 이해를 돕는 탐색 도구이지 systematic search 자체를 대체하지는 않습니다.</li>
+      </ul>
+      <p class="modal-note"><a href="https://www.litmaps.com/features" target="_blank" rel="noreferrer">litmaps.com/features</a></p>
+    `,
   },
   "modal-consensus": {
     kicker: "Mention",
     title: "Consensus",
-    body: "<p>논문 기반으로 특정 주장에 대한 근거를 빠르게 확인하는 도구입니다.</p>",
+    body: `
+      <p><strong>Consensus</strong>는 질문이나 주장에 대해 관련 논문을 찾아 근거가 어느 방향을 지지하는지 빠르게 확인하는 academic AI search 도구입니다.</p>
+      <ul>
+        <li><strong>언제 쓰나:</strong> "이 주장에 논문 근거가 있나?", "대체로 효과가 있다고 보는가?"처럼 claim 검토가 필요할 때 좋습니다.</li>
+        <li><strong>강점:</strong> 논문 기반 답변, 요약, source 확인, 주장별 근거 탐색.</li>
+        <li><strong>연구실 활용:</strong> 발표 도입부의 일반론이나 배경 문장을 넣기 전, 근거 문헌이 실제로 있는지 확인합니다.</li>
+        <li><strong>주의:</strong> 연구 설계, sample size, endpoint 차이를 뭉뚱그릴 수 있으므로 primary paper를 반드시 읽어야 합니다.</li>
+      </ul>
+      <p class="modal-note"><a href="https://consensus.app/" target="_blank" rel="noreferrer">consensus.app</a></p>
+    `,
   },
   "modal-scispace": {
     kicker: "Mention",
     title: "SciSpace",
-    body: "<p>논문 PDF의 어려운 문단, 표, 수식을 설명받기 좋은 도구입니다.</p>",
+    body: `
+      <p><strong>SciSpace</strong>는 논문 PDF를 읽으면서 어려운 문단, 표, 수식, 방법론을 질문하고 설명받는 데 유용한 research reading assistant입니다.</p>
+      <ul>
+        <li><strong>언제 쓰나:</strong> 낯선 분야 논문을 처음 읽거나, method/figure caption을 빠르게 이해해야 할 때 좋습니다.</li>
+        <li><strong>강점:</strong> PDF chat, citation-linked answer, section-wise summary, 여러 언어 지원.</li>
+        <li><strong>연구실 활용:</strong> journal club 준비에서 "이 figure가 무엇을 비교했는지", "이 assay가 무엇을 의미하는지" 초안을 잡습니다.</li>
+        <li><strong>주의:</strong> 표/수식/figure 해석은 틀릴 수 있으므로 원문과 figure legend를 나란히 확인해야 합니다.</li>
+      </ul>
+      <p class="modal-note"><a href="https://scispace.com/chat-pdf" target="_blank" rel="noreferrer">scispace.com/chat-pdf</a></p>
+    `,
   },
   "modal-perplexity": {
     kicker: "Mention",
     title: "Perplexity",
-    body: "<p>출처 기반 웹 검색과 빠른 리서치에 강한 AI 검색 도구입니다.</p>",
+    body: `
+      <p><strong>Perplexity</strong>는 웹 검색 결과를 바탕으로 출처가 달린 요약 답변을 빠르게 만드는 AI search 도구입니다.</p>
+      <ul>
+        <li><strong>언제 쓰나:</strong> 최신 제품/정책/도구/뉴스처럼 웹에서 빠르게 바뀌는 정보를 확인할 때 좋습니다.</li>
+        <li><strong>강점:</strong> citation이 붙은 답변, follow-up 질문, 빠른 overview 생성, 공식 문서 탐색.</li>
+        <li><strong>연구실 활용:</strong> 새로운 AI 도구, 데이터베이스, 분석 패키지, 공식 문서 링크를 빠르게 찾습니다.</li>
+        <li><strong>주의:</strong> citation이 있다고 항상 충분한 근거라는 뜻은 아닙니다. 최종 판단은 원문 링크를 열어 확인해야 합니다.</li>
+      </ul>
+      <p class="modal-note"><a href="https://www.perplexity.ai/help-center/en/articles/10352903-what-is-pro-search.html" target="_blank" rel="noreferrer">Perplexity Help Center</a></p>
+    `,
   },
   "modal-alphafold": {
     kicker: "Mention",
     title: "AlphaFold Server",
-    body: "<p>생명과학 분야의 단백질/분자 구조 예측 특화 도구입니다.</p>",
+    body: `
+      <p><strong>AlphaFold Server</strong>는 AlphaFold 3 기반으로 단백질과 DNA/RNA, ligand, ion 등 biomolecule interaction 구조를 예측하는 생명과학 특화 도구입니다.</p>
+      <ul>
+        <li><strong>언제 쓰나:</strong> protein structure, protein-ligand interaction, protein-DNA/RNA interaction 가설을 구조적으로 보고 싶을 때 좋습니다.</li>
+        <li><strong>강점:</strong> 구조 예측을 wet lab 실험 전 hypothesis generation과 시각적 검토에 활용할 수 있습니다.</li>
+        <li><strong>연구실 활용:</strong> 후보 단백질/변이/ligand interaction을 보기 위한 preliminary model로 사용합니다.</li>
+        <li><strong>주의:</strong> 예측 구조는 실험 검증을 대체하지 않습니다. confidence score, binding site plausibility, known structure와 비교가 필요합니다.</li>
+      </ul>
+      <p class="modal-note"><a href="https://alphafoldserver.com/about" target="_blank" rel="noreferrer">alphafoldserver.com/about</a></p>
+    `,
   },
   "modal-skill-paper": {
     kicker: "Paper",

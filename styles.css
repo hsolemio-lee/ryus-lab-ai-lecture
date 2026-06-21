@@ -501,7 +501,37 @@ h3 {
 }
 
 .mention-list {
-  grid-template-columns: repeat(7, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 34px;
+}
+
+.mention-list button {
+  min-height: 138px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  overflow: hidden;
+}
+
+.mention-list strong,
+.mention-list span {
+  display: block;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+  word-break: keep-all;
+}
+
+.mention-list strong {
+  font-size: clamp(1.08rem, 1.7vw, 1.35rem);
+  line-height: 1.12;
+}
+
+.mention-list span {
+  color: var(--muted);
+  font-size: clamp(0.86rem, 1.1vw, 0.98rem);
+  line-height: 1.38;
 }
 
 .frontier-grid,
