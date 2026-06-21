@@ -37,7 +37,7 @@ window.MODALS = {
         <li>Java/Spring, React, Kubernetes, RDBMS, Python, FastAPI 기반 개발</li>
         <li>Codex, Claude Code, opencode를 활용한 코드 생성, 리팩터링, 테스트 개선, 문서화, 반복 업무 자동화 경험</li>
         <li>성균관대학교 수학/심리학 복수전공</li>
-        <li>오늘은 차지민 박사의 남편이라는 매우 실전적인 이해관계자 역할도 포함</li>
+        <li>오늘은 실제 연구실 workflow를 가까이에서 보는 실무 협업자의 관점도 포함</li>
       </ul>
     `,
   },
@@ -479,9 +479,9 @@ scientific-agent-skills의 연구 분석 workflow를 따른다고 가정하고,
       <p>그래서 AI는 실력을 평평하게 만드는 도구라기보다, 사람이 가진 작업 설계 능력과 검증 능력을 크게 증폭하는 도구에 가깝습니다.</p>
     `,
   },
-  "modal-jimin-example": {
+  "modal-research-case-example": {
     kicker: "Research Review",
-    title: "차지민 박사와의 분석 검토 루프",
+    title: "연구자 피드백 기반 분석 검토 루프",
     body: `
       <p>분석 요청은 단순한 답변으로 끝나지 않고, 연구자 피드백을 반영하며 기준 문서, 테스트, HTML 시각화, 최종 선별 패키지, PPT 변환, 전달 단계까지 이어졌습니다.</p>
       <div class="dialogue">
@@ -501,40 +501,40 @@ scientific-agent-skills의 연구 분석 workflow를 따른다고 가정하고,
       <p>핵심은 Agent가 모든 판단을 대신한 것이 아니라, 반복 작업과 산출물 생성을 맡고 연구자는 분석 단위, 비교 기준, 그림의 해석 가능성, 최종 전달본을 검토했다는 점입니다.</p>
     `,
   },
-  "modal-jimin-artifact-overview": {
+  "modal-research-case-artifact-overview": {
     kicker: "Actual Artifact",
     title: "CRC overview heatmap",
     size: "wide",
     body: `
       <p>최종 선별 패키지에 포함된 overview heatmap입니다. 여러 조건의 CRC 관련 gene panel을 한 번에 보고, 이후 driver core / oncogenic program / PCA로 좁혀가는 기준점으로 사용했습니다.</p>
       <figure class="artifact-modal-figure">
-        <img src="assets/jimin-session/crc-heatmap-overview.png" alt="CRC overview heatmap" />
+        <img src="assets/research-review-case/crc-heatmap-overview.png" alt="CRC overview heatmap" />
       </figure>
     `,
   },
-  "modal-jimin-artifact-driver": {
+  "modal-research-case-artifact-driver": {
     kicker: "Actual Artifact",
     title: "Driver core heatmap",
     size: "wide",
     body: `
-      <p>차지민 박사의 피드백으로 대비를 더 강하게 조정한 heatmap입니다. 여기서 중요한 포인트는 계산 자체보다, 연구자가 실제로 비교를 읽을 수 있도록 figure를 다시 다듬었다는 점입니다.</p>
+      <p>연구자 피드백으로 대비를 더 강하게 조정한 heatmap입니다. 여기서 중요한 포인트는 계산 자체보다, 연구자가 실제로 비교를 읽을 수 있도록 figure를 다시 다듬었다는 점입니다.</p>
       <figure class="artifact-modal-figure">
-        <img src="assets/jimin-session/crc-driver-core-heatmap.png" alt="CRC driver core heatmap" />
+        <img src="assets/research-review-case/crc-driver-core-heatmap.png" alt="CRC driver core heatmap" />
       </figure>
     `,
   },
-  "modal-jimin-artifact-pca": {
+  "modal-research-case-artifact-pca": {
     kicker: "Actual Artifact",
     title: "Group-averaged PCA",
     size: "wide",
     body: `
       <p>C/P를 구분하지 말고 한 그룹으로 묶자는 피드백을 반영한 PCA입니다. Agent가 임의로 분석 단위를 고정하지 않고, 연구자의 실험 맥락에 맞춰 grouping을 수정한 예시입니다.</p>
       <figure class="artifact-modal-figure">
-        <img src="assets/jimin-session/crc-pca-group-avg.png" alt="CRC group averaged PCA" />
+        <img src="assets/research-review-case/crc-pca-group-avg.png" alt="CRC group averaged PCA" />
       </figure>
     `,
   },
-  "modal-jimin-artifact-volcano": {
+  "modal-research-case-artifact-volcano": {
     kicker: "Actual Artifact",
     title: "Group-averaged volcano plots",
     size: "wide",
@@ -542,25 +542,25 @@ scientific-agent-skills의 연구 분석 workflow를 따른다고 가정하고,
       <p>세션 후반에 "사이드에서 만든 volcano도 포함된거야?"라는 확인이 있었고, 주요 group-averaged volcano 4종을 최종 패키지에 포함했습니다. 이 volcano들은 exploratory 결과로, replicate 기반 통계 검정처럼 과하게 해석하지 않도록 한계도 함께 남겼습니다.</p>
       <div class="artifact-modal-grid">
         <figure>
-          <img src="assets/jimin-session/kras-he-vs-wt-volcano.png" alt="Kras He vs WT group averaged volcano" />
+          <img src="assets/research-review-case/kras-he-vs-wt-volcano.png" alt="Kras He vs WT group averaged volcano" />
           <figcaption>Kras He vs WT</figcaption>
         </figure>
         <figure>
-          <img src="assets/jimin-session/kras-fuso-vs-kras-he-volcano.png" alt="Kras Fuso vs Kras He group averaged volcano" />
+          <img src="assets/research-review-case/kras-fuso-vs-kras-he-volcano.png" alt="Kras Fuso vs Kras He group averaged volcano" />
           <figcaption>Kras Fuso vs Kras He</figcaption>
         </figure>
         <figure>
-          <img src="assets/jimin-session/kras-bv-vs-kras-he-volcano.png" alt="Kras BV vs Kras He group averaged volcano" />
+          <img src="assets/research-review-case/kras-bv-vs-kras-he-volcano.png" alt="Kras BV vs Kras He group averaged volcano" />
           <figcaption>Kras B.V. vs Kras He</figcaption>
         </figure>
         <figure>
-          <img src="assets/jimin-session/kras-bv-il10-vs-kras-bv-volcano.png" alt="Kras BV IL10 vs Kras BV group averaged volcano" />
+          <img src="assets/research-review-case/kras-bv-il10-vs-kras-bv-volcano.png" alt="Kras BV IL10 vs Kras BV group averaged volcano" />
           <figcaption>Kras B.V. IL-10 vs Kras B.V.</figcaption>
         </figure>
       </div>
     `,
   },
-  "modal-jimin-artifact-package": {
+  "modal-research-case-artifact-package": {
     kicker: "Final Package",
     title: "최종 전달 패키지",
     body: `
@@ -575,7 +575,7 @@ scientific-agent-skills의 연구 분석 workflow를 따른다고 가정하고,
       <p>Agent는 분석, 시각화, 검증, 패키징, 전달 준비까지 이어갈 수 있습니다. 다만 분석 단위와 해석 강도는 연구자 피드백이 들어가야 안정적입니다.</p>
     `,
   },
-  "modal-jimin-case-1": {
+  "modal-research-case-step-1": {
     kicker: "Real Case",
     title: "분석 단위 수정: C/P를 구분하지 않고 한 그룹으로 묶기",
     body: `
@@ -588,11 +588,11 @@ scientific-agent-skills의 연구 분석 workflow를 따른다고 가정하고,
       <ul>
         <li>수정 전: WT, Kras He, B.V., B.V. IL-10, Fuso를 색으로 표시하고 C/P를 별도 모양으로 구분</li>
         <li>수정 후: C/P를 평균내어 조건당 1점만 표시</li>
-        <li>차지민 박사와 진행한 작업에서 HITL: 실험 단위와 비교 단위는 AI가 임의로 정하면 안 되고, 연구자의 실험 맥락이 들어가야 합니다.</li>
+        <li>실제 연구 분석 작업에서 본 HITL: 실험 단위와 비교 단위는 AI가 임의로 정하면 안 되고, 연구자의 실험 맥락이 들어가야 합니다.</li>
       </ul>
     `,
   },
-  "modal-jimin-case-2": {
+  "modal-research-case-step-2": {
     kicker: "Real Case",
     title: "PCA 기준 선택: overview 패널, oncogenic 패널, 전체 matrix",
     body: `
@@ -610,7 +610,7 @@ scientific-agent-skills의 연구 분석 workflow를 따른다고 가정하고,
       <p>추천은 overview 패널이었습니다. 이유는 이미 본 heatmap 흐름과 자연스럽게 이어지고, 전체 유전자를 쓰는 것보다 노이즈가 덜하기 때문입니다. 사용자는 이 중 1번을 선택했습니다.</p>
     `,
   },
-  "modal-jimin-case-4": {
+  "modal-research-case-step-4": {
     kicker: "Real Case",
     title: "Heatmap 대비 조정: 연구자가 보기 좋은 그림으로 수정",
     body: `
@@ -626,10 +626,10 @@ scientific-agent-skills의 연구 분석 workflow를 따른다고 가정하고,
         <li>작은 발현 차이도 더 잘 보이도록 contrast-enhanced scale 적용</li>
         <li>이후 같은 방식으로 overview와 oncogenic program heatmap도 고대비 버전으로 재생성</li>
       </ul>
-      <p>차지민 박사와 진행한 작업에서 HITL: figure는 "맞는 계산"뿐 아니라 "연구자가 비교를 읽을 수 있는 시각화"여야 합니다.</p>
+      <p>실제 연구 분석 작업에서 본 HITL: figure는 "맞는 계산"뿐 아니라 "연구자가 비교를 읽을 수 있는 시각화"여야 합니다.</p>
     `,
   },
-  "modal-jimin-case-6": {
+  "modal-research-case-step-6": {
     kicker: "Real Case",
     title: "Volcano/PCA 선별: 최종 결과만 남기기",
     body: `
@@ -649,7 +649,7 @@ scientific-agent-skills의 연구 분석 workflow를 따른다고 가정하고,
       <p>특히 "사이드에서 만든 volcano도 포함된거야?"라는 확인이 있었고, 주요 volcano 결과가 최종 패키지에 포함됐는지 다시 검증했습니다.</p>
     `,
   },
-  "modal-jimin-case-7": {
+  "modal-research-case-step-7": {
     kicker: "Real Case",
     title: "최종 패키징: 공유 가능한 산출물로 정리",
     body: `
@@ -668,10 +668,10 @@ scientific-agent-skills의 연구 분석 workflow를 따른다고 가정하고,
         <li>FASTQ QC summary와 MD5 verification</li>
         <li>전달용 README와 메일 본문</li>
       </ul>
-      <p>차지민 박사와 진행한 작업에서 HITL: 좋은 Agent workflow는 분석을 끝내는 데서 멈추지 않고, 공동연구자에게 전달 가능한 형태까지 정리합니다.</p>
+      <p>실제 연구 분석 작업에서 본 HITL: 좋은 Agent workflow는 분석을 끝내는 데서 멈추지 않고, 공동연구자에게 전달 가능한 형태까지 정리합니다.</p>
     `,
   },
-  "modal-jimin-case-8": {
+  "modal-research-case-step-8": {
     kicker: "Real Case",
     title: "PPT/전달까지 확장: HTML 결과를 발표자료로 변환",
     body: `
@@ -688,7 +688,7 @@ scientific-agent-skills의 연구 분석 workflow를 따른다고 가정하고,
         <li>group-averaged PCA와 주요 volcano 결과 포함</li>
         <li>PPT 생성 후 슬라이드 수와 파일 생성 여부 확인</li>
       </ul>
-      <p>차지민 박사와 진행한 작업에서 HITL: Agent는 분석 도우미를 넘어, 결과 공유와 발표자료 준비까지 이어지는 반복 업무를 맡을 수 있습니다.</p>
+      <p>실제 연구 분석 작업에서 본 HITL: Agent는 분석 도우미를 넘어, 결과 공유와 발표자료 준비까지 이어지는 반복 업무를 맡을 수 있습니다.</p>
     `,
   },
   "modal-prompt": {

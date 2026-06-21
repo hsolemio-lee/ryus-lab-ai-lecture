@@ -35,8 +35,8 @@ window.SLIDES = [
           </div>
           <div class="quote-block">
             <p>
-              오늘은 차지민 박사 연구실과 가까운 사람으로서, 연구자의 실제 workflow에 AI가 어떻게 들어와야
-              하는지를 최대한 현실적으로 이야기합니다.
+              오늘은 실제 연구실 workflow와 가까운 실무 협업자의 관점에서,
+              연구자의 일에 AI가 어떻게 들어와야 하는지를 최대한 현실적으로 이야기합니다.
             </p>
           </div>
         </div>
@@ -300,17 +300,17 @@ window.SLIDES = [
           </div>
           <div class="case-card">
             <p class="kicker">Example 2</p>
-            <h3>차지민 박사와의 분석 검토</h3>
+            <h3>연구자 피드백 기반 분석 검토</h3>
             <p>
               데이터 분석의 기술적 실행은 도와줄 수 있지만, 생물학적 해석은 연구자의 검토 없이는 완성되지 않습니다.
             </p>
-            <button class="text-button" data-modal="modal-jimin-example">검토 루프</button>
+            <button class="text-button" data-modal="modal-research-case-example">검토 루프</button>
           </div>
         </div>
     `,
   },
   {
-    id: "jimin-artifacts",
+    id: "research-artifacts",
     className: "slide image-slide",
     section: "Agentic AI",
     html: `
@@ -318,43 +318,43 @@ window.SLIDES = [
           <p class="kicker">Actual Artifacts</p>
           <h2>실제 결과물</h2>
           <div class="artifact-gallery">
-            <button data-modal="modal-jimin-artifact-overview">
-              <img src="assets/jimin-session/crc-heatmap-overview.png" alt="CRC overview heatmap" />
+            <button data-modal="modal-research-case-artifact-overview">
+              <img src="assets/research-review-case/crc-heatmap-overview.png" alt="CRC overview heatmap" />
               <span>CRC overview heatmap</span>
             </button>
-            <button data-modal="modal-jimin-artifact-driver">
-              <img src="assets/jimin-session/crc-driver-core-heatmap.png" alt="CRC driver core heatmap" />
+            <button data-modal="modal-research-case-artifact-driver">
+              <img src="assets/research-review-case/crc-driver-core-heatmap.png" alt="CRC driver core heatmap" />
               <span>Driver core heatmap</span>
             </button>
-            <button data-modal="modal-jimin-artifact-pca">
-              <img src="assets/jimin-session/crc-pca-group-avg.png" alt="CRC group averaged PCA" />
+            <button data-modal="modal-research-case-artifact-pca">
+              <img src="assets/research-review-case/crc-pca-group-avg.png" alt="CRC group averaged PCA" />
               <span>Group-averaged PCA</span>
             </button>
-            <button data-modal="modal-jimin-artifact-volcano">
-              <img src="assets/jimin-session/kras-fuso-vs-kras-he-volcano.png" alt="Kras Fuso versus Kras He group averaged volcano" />
+            <button data-modal="modal-research-case-artifact-volcano">
+              <img src="assets/research-review-case/kras-fuso-vs-kras-he-volcano.png" alt="Kras Fuso versus Kras He group averaged volcano" />
               <span>Group-averaged volcano</span>
             </button>
           </div>
-          <button class="text-button" data-modal="modal-jimin-artifact-package">최종 패키지 구성 보기</button>
-          <a class="text-button" href="#jimin-session-case">HITL 과정 보기</a>
+          <button class="text-button" data-modal="modal-research-case-artifact-package">최종 패키지 구성 보기</button>
+          <a class="text-button" href="#research-session-case">HITL 과정 보기</a>
         </div>
     `,
   },
   {
-    id: "jimin-session-case",
+    id: "research-session-case",
     className: "slide",
     section: "Agentic AI",
     html: `
 <div class="slide-inner">
           <p class="kicker">Real Case</p>
-          <h2>차지민 박사와 진행한 작업에서 본<br>HITL</h2>
+          <h2>실제 연구 분석 작업에서 본<br>HITL</h2>
           <div class="step-grid">
-            <button data-modal="modal-jimin-case-1"><strong>1</strong><span>분석 단위 수정</span></button>
-            <button data-modal="modal-jimin-case-2"><strong>2</strong><span>PCA 기준 선택</span></button>
-            <button data-modal="modal-jimin-case-4"><strong>3</strong><span>Heatmap 대비 조정</span></button>
-            <button data-modal="modal-jimin-case-6"><strong>4</strong><span>Volcano/PCA 선별</span></button>
-            <button data-modal="modal-jimin-case-7"><strong>5</strong><span>최종 패키징</span></button>
-            <button data-modal="modal-jimin-case-8"><strong>6</strong><span>PPT/전달까지 확장</span></button>
+            <button data-modal="modal-research-case-step-1"><strong>1</strong><span>분석 단위 수정</span></button>
+            <button data-modal="modal-research-case-step-2"><strong>2</strong><span>PCA 기준 선택</span></button>
+            <button data-modal="modal-research-case-step-4"><strong>3</strong><span>Heatmap 대비 조정</span></button>
+            <button data-modal="modal-research-case-step-6"><strong>4</strong><span>Volcano/PCA 선별</span></button>
+            <button data-modal="modal-research-case-step-7"><strong>5</strong><span>최종 패키징</span></button>
+            <button data-modal="modal-research-case-step-8"><strong>6</strong><span>PPT/전달까지 확장</span></button>
           </div>
         </div>
     `,
