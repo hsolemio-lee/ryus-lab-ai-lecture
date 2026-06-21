@@ -622,7 +622,10 @@ FastQC/trim → align/quant → counts
 	            <p class="lead">
 	              오늘 실습은 설명을 듣는 시간이 아니라,<br>Skill을 불러 실제 데이터 폴더에서 검토 가능한<br>Report, Figure note, 발표용 요약을 만들어보는 시간입니다.
 	            </p>
-	            <button class="text-button" data-modal="modal-practice-goal">실습 목표</button>
+	            <div class="practice-actions">
+	              <button class="text-button" data-modal="modal-practice-goal">실습 목표</button>
+	              <a class="download-chip" href="assets/downloads/keratinocyte_analysis_results_no_fastq.zip" download>실습 ZIP 다운로드</a>
+	            </div>
 	          </div>
 	          <div class="terminal-card" aria-label="실습 프롬프트 예시">
 	            <span>$ codex</span>
@@ -667,7 +670,6 @@ FastQC/trim → align/quant → counts
             <button data-modal="modal-deg">DEG 요약</button>
             <button data-modal="modal-kegg">KEGG/GO</button>
             <button data-modal="modal-qc">QC 포인트</button>
-            <a class="download-chip" href="assets/downloads/keratinocyte_analysis_results_no_fastq.zip" download>실습 ZIP 다운로드</a>
           </div>
         </div>
     `,

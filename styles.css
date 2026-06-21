@@ -301,7 +301,8 @@ h3 {
 }
 
 .hero-actions,
-.metric-row {
+.metric-row,
+.practice-actions {
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
@@ -311,6 +312,7 @@ h3 {
 .pill-button,
 .text-button,
 .external-link,
+.download-chip,
 .modal-content a {
   display: inline-flex;
   align-items: center;
@@ -328,12 +330,14 @@ h3 {
 .pill-button.ghost,
 .text-button,
 .external-link,
+.download-chip,
 .modal-content a {
   background: transparent;
   color: var(--ink);
 }
 
-.text-button {
+.text-button,
+.practice-actions .download-chip {
   margin-top: 14px;
 }
 
