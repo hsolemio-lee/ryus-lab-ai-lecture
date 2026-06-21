@@ -12,6 +12,7 @@ window.SLIDES = [
 	            </p>
 	            <div class="hero-actions">
 	              <button class="pill-button" data-modal="modal-overview">강의 흐름</button>
+	              <a class="pill-button" href="assets/downloads/ryus-lab-ai-lecture-notes.pdf" download>강의 노트 PDF</a>
 	            </div>
 	          </div>
 	        </div>
