@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="연구원 대상 AI 활용법 강의 - Agentic AI, 연구 workflow, Codex 실습"
+    />
+    <title>연구자를 위한 AI 활용법</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar" aria-label="강의 진행">
+      <a class="brand" href="#intro" aria-label="첫 슬라이드로 이동">
+        <span class="brand-mark"></span>
+        <span>AI for Researchers</span>
+      </a>
+      <nav class="section-nav" aria-label="슬라이드 목차">
+        <a href="#intro" data-active-sections="소개,Agentic AI">AI 활용 개요</a>
+        <a href="#principles-cover" data-active-sections="이해">AI 활용 원칙</a>
+        <a href="#practice-cover" data-active-sections="실습">실습</a>
+        <a href="#tools-cover" data-active-sections="도구">AI 도구 소개</a>
+        <a href="#closing-cover" data-active-sections="마무리">마무리</a>
+      </nav>
+      <div class="progress-label" aria-live="polite">
+        <span id="currentSlide">01</span>/<span id="totalSlides">00</span>
+      </div>
+    </header>
+
+    <aside class="rail" aria-hidden="true">
+      <div class="rail-line"><span id="progressBar"></span></div>
+    </aside>
+
+    <main id="slidesRoot"></main>
+
+    <div class="modal-root" id="modalRoot" aria-hidden="true">
+      <div class="modal-backdrop" data-close-modal></div>
+      <article class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+        <button class="modal-close" type="button" data-close-modal aria-label="닫기">×</button>
+        <p class="modal-kicker" id="modalKicker"></p>
+        <h2 id="modalTitle"></h2>
+        <div class="modal-content" id="modalContent"></div>
+      </article>
+    </div>
+
+    <script src="data/slides.js"></script>
+    <script src="data/modals.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
