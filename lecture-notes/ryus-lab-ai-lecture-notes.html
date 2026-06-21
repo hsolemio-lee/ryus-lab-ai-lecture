@@ -382,12 +382,12 @@
         </div>
         <div class="meta-card">
           <strong>배포 자료</strong>
-          <span>GitHub Pages 발표자료와 Hands-on ZIP 파일</span>
+          <span>GitHub Pages 발표자료와 실습 준비 파일</span>
         </div>
       </div>
     </div>
     <p class="cover-footer">
-      이 노트는 발표 슬라이드보다 자세한 설명을 담은 배포용 자료입니다. 실습 중에는 각자의 연구 맥락에 맞게 prompt, context, 검토 기준을 수정해 사용하세요.
+      이 노트는 발표 슬라이드보다 자세한 설명을 담은 배포용 자료입니다. 예시는 각자의 연구 맥락에 맞게 prompt, context, 검토 기준을 수정해 사용하세요.
     </p>
   </section>
 
@@ -401,13 +401,13 @@
       <li>현재 Agent가 할 수 있는 일과 한계</li>
       <li>논문 발표 준비 라이브 데모</li>
       <li>어떤 AI를 쓰느냐보다 중요한 것</li>
-      <li>HITL: 연구자 피드백 기반 작업 사례</li>
+      <li>HITL: 연구자 피드백 기반 작업 방식</li>
       <li>LLM을 다루는 올바른 마음가짐</li>
       <li>Context Engineering</li>
       <li>Hallucination과 검증 절차</li>
       <li>Stable Agent Workflow</li>
       <li>AGENTS.md와 Skill</li>
-      <li>Hands-on: keratinocyte RNA-seq 산출물 만들기</li>
+      <li>Hands-on: 연구 데이터 산출물 만들기</li>
       <li>Codex에서 유용한 기능</li>
       <li>연구자를 위한 AI 도구 소개</li>
       <li>마지막 메시지: 읽기, 질문, 판단</li>
@@ -417,7 +417,7 @@
   <section>
     <h2>1. 강의 전 준비사항</h2>
     <p>
-      이 강의는 단순히 AI에게 질문하고 답을 보는 시간이 아니라, Codex 같은 Agent에게 실제 파일과 작업 목표를 주고 산출물을 만들어보는 hands-on 형식입니다. 실습 시간이 짧기 때문에 아래 항목을 강의 전에 준비해두면 좋습니다.
+      이 강의는 단순히 AI에게 질문하고 답을 보는 시간이 아니라, Codex 같은 Agent에게 실제 파일과 작업 목표를 주고 산출물을 만들어보는 hands-on 형식입니다. 실습 시간이 짧기 때문에 아래 항목을 미리 준비해두면 좋습니다.
     </p>
 
     <div class="prep-grid">
@@ -431,8 +431,8 @@
       </div>
       <div class="check-card">
         <strong>3. 실습 파일 다운로드</strong>
-        <p>Hands-on 섹션에서 제공되는 ZIP 파일을 미리 다운로드합니다. 원시 FASTQ는 제외되어 있고, 분석 완료 산출물 중심으로 구성되어 있습니다.</p>
-        <p><a href="https://hsolemio-lee.github.io/ryus-lab-ai-lecture/assets/downloads/keratinocyte_analysis_results_no_fastq.zip">keratinocyte_analysis_results_no_fastq.zip</a></p>
+        <p>Hands-on에서 사용할 실습 파일을 미리 다운로드합니다. 원본 raw data 전체를 새로 분석하기보다, 이미 준비된 산출물을 읽고 검토하는 방식으로 진행합니다.</p>
+        <p><a href="https://hsolemio-lee.github.io/ryus-lab-ai-lecture/">강의 자료 페이지에서 실습 ZIP 다운로드</a></p>
       </div>
       <div class="check-card">
         <strong>4. 작업 폴더 준비</strong>
@@ -448,7 +448,7 @@
     <ul>
       <li>Codex 앱 실행과 로그인 완료</li>
       <li>OpenAI 계정 준비, 가능하면 Plus 이상 사용</li>
-      <li>실습 ZIP 다운로드와 압축 해제 완료</li>
+      <li>실습 파일 다운로드와 압축 해제 완료</li>
       <li>Codex에서 실습 폴더 열기 가능</li>
       <li>강의 중 사용할 prompt를 복사할 수 있는 메모장 준비</li>
       <li>연구 데이터에 적용할 경우, 원본 파일을 수정하지 않는 별도 작업 폴더 준비</li>
@@ -468,7 +468,7 @@
     </p>
     <div class="kpi">
       <div><strong>Paper</strong><span>논문 PDF에서 발표 목차, figure map, 대본, PPT draft 생성</span></div>
-      <div><strong>Data</strong><span>RNA-seq 결과에서 analysis report와 figure note 생성</span></div>
+      <div><strong>Data</strong><span>연구 데이터에서 analysis report와 figure note 생성</span></div>
       <div><strong>Artifact</strong><span>답변이 아니라 파일, 표, 그림, checklist로 남기기</span></div>
       <div><strong>Review</strong><span>최종 해석과 판단은 연구자가 책임지기</span></div>
     </div>
@@ -541,7 +541,7 @@
         <tr>
           <td><strong>Workflow</strong></td>
           <td>목표를 산출물까지 가져가는 반복 가능한 절차입니다.</td>
-          <td>파일 구조 확인, QC/DEG/pathway 검토, figure 후보 선정, 해석 한계 표시, report/PPT draft 생성이 하나의 workflow가 됩니다.</td>
+          <td>파일 구조 확인, QC와 통계 기준 검토, figure 후보 선정, 해석 한계 표시, report/PPT draft 생성이 하나의 workflow가 됩니다.</td>
         </tr>
         <tr>
           <td><strong>HITL</strong></td>
@@ -551,7 +551,7 @@
         <tr>
           <td><strong>Skill</strong></td>
           <td>Agent에게 주는 재사용 가능한 작업 매뉴얼입니다.</td>
-          <td>RNA-seq, literature review, figure review처럼 반복되는 작업 절차와 검증 기준을 묶어둡니다.</td>
+          <td>data analysis, literature review, figure review처럼 반복되는 작업 절차와 검증 기준을 묶어둡니다.</td>
         </tr>
         <tr>
           <td><strong>Hooks</strong></td>
@@ -738,7 +738,7 @@
         <tr>
           <td><strong>Domain Knowledge</strong></td>
           <td>특정 문제 영역의 용어, 맥락, 데이터, 관행, 제약조건, 좋은 결과의 기준을 이해하는 지식입니다.</td>
-          <td>SPF vs GF 비교에서 어떤 sample을 묶어야 하는지, 어떤 marker 해석이 과한지 판단합니다.</td>
+          <td>treatment vs control 비교에서 어떤 sample을 묶어야 하는지, 어떤 marker나 pathway 해석이 과한지 판단합니다.</td>
         </tr>
         <tr>
           <td><strong>Context</strong></td>
@@ -771,54 +771,48 @@
   </section>
 
   <section>
-    <h2>8. HITL: 연구자 피드백 기반 작업 사례</h2>
+    <h2>8. HITL: 연구자 피드백 기반 작업 방식</h2>
     <p>
-      실제 분석 작업에서 Agent는 파일을 읽고, figure를 만들고, report를 구성하고, PPT 변환과 전달 준비까지 이어갈 수 있습니다. 하지만 분석 단위, 비교 기준, 시각화 방식, 생물학적 해석은 연구자의 검토가 들어가야 안정적입니다.
+      실제 연구 업무에서 Agent는 파일을 읽고, figure를 만들고, report를 구성하고, 발표자료 초안까지 이어갈 수 있습니다. 하지만 분석 단위, 비교 기준, 시각화 방식, 해석의 강도는 연구자의 검토가 들어가야 안정적입니다.
     </p>
 
-    <h3>작업에서 드러난 HITL 포인트</h3>
+    <h3>HITL이 필요한 대표 지점</h3>
     <table>
       <thead>
-        <tr><th>상황</th><th>사람의 피드백</th><th>Agent가 한 일</th></tr>
+        <tr><th>지점</th><th>연구자가 확인할 것</th><th>Agent에게 맡길 수 있는 일</th></tr>
       </thead>
       <tbody>
         <tr>
-          <td>분석 단위 수정</td>
-          <td>C와 P를 구분하지 말고 한 그룹으로 묶도록 지시</td>
-          <td>group 평균 기준으로 PCA와 volcano 해석을 다시 구성</td>
+          <td>분석 단위</td>
+          <td>sample, replicate, condition, batch를 어떻게 묶을지 결정</td>
+          <td>metadata를 읽고 가능한 grouping 후보와 장단점 제시</td>
         </tr>
         <tr>
-          <td>PCA 기준 선택</td>
-          <td>조건별 replicate가 아니라 조건 단위 비교가 필요하다고 판단</td>
-          <td>group-averaged PCA로 시각화 기준 변경</td>
+          <td>비교 기준</td>
+          <td>어떤 contrast가 연구 질문에 맞는지 판단</td>
+          <td>비교군별 결과 table, summary, figure 후보 정리</td>
         </tr>
         <tr>
-          <td>Heatmap 대비 조정</td>
-          <td>패턴이 잘 보이도록 contrast와 scaling을 조정</td>
-          <td>색상 범위와 gene panel 구성을 조정한 heatmap 생성</td>
+          <td>시각화</td>
+          <td>axis, scale, color, threshold, filtering 기준이 적절한지 확인</td>
+          <td>volcano, heatmap, PCA, enrichment plot 초안 생성과 figure note 작성</td>
         </tr>
         <tr>
-          <td>Volcano/PCA 선별</td>
-          <td>발표에 사용할 figure 후보를 선별</td>
-          <td>최종 패키지 구성과 PPT 변환 준비</td>
+          <td>해석</td>
+          <td>관찰된 결과, 가능한 가설, 추가 검증 필요 항목을 구분</td>
+          <td>과한 claim 후보를 표시하고 보수적인 문장으로 수정 제안</td>
+        </tr>
+        <tr>
+          <td>전달</td>
+          <td>공동연구자나 청중에게 공유해도 되는 수준인지 최종 판단</td>
+          <td>report, checklist, PPT draft, README, 전달 메일 초안 작성</td>
         </tr>
       </tbody>
     </table>
 
-    <div class="two-col">
-      <figure class="figure-card">
-        <img src="../assets/research-review-case/crc-heatmap-overview.png" alt="CRC overview heatmap" />
-        <figcaption>CRC overview heatmap. 분석 방향성을 빠르게 확인하기 위한 결과물입니다.</figcaption>
-      </figure>
-      <figure class="figure-card">
-        <img src="../assets/research-review-case/crc-pca-group-avg.png" alt="Group averaged PCA" />
-        <figcaption>Group-averaged PCA. 비교 단위를 연구자가 조정한 뒤 다시 만든 artifact입니다.</figcaption>
-      </figure>
+    <div class="callout">
+      핵심은 Agent가 모든 판단을 대신하는 것이 아닙니다. Agent는 반복 작업과 산출물 생성을 맡고, 연구자는 분석 단위, 비교 기준, 해석 가능성, 최종 전달본을 검토합니다.
     </div>
-
-    <p>
-      이 사례의 핵심은 Agent가 무능하다는 것이 아닙니다. 오히려 Agent는 빠르게 여러 산출물을 만들 수 있습니다. 다만 어떤 산출물이 연구 질문에 맞는지, 어떤 비교가 생물학적으로 의미 있는지, 어떤 표현이 과한지는 연구자의 도메인 검토가 필요합니다.
-    </p>
   </section>
 
   <section>
@@ -853,8 +847,8 @@
     <pre>이 데이터 분석해줘.</pre>
 
     <h3>좋은 요청</h3>
-    <pre>이 폴더는 keratinocyte SPF vs GF bulk RNA-seq 분석 결과야.
-원시 FASTQ는 이번 실습에서 제외하고, 이미 만들어진 DEG, enrichment, figure 파일을 기준으로 봐줘.
+    <pre>이 폴더는 처리 완료된 연구 데이터 분석 결과야.
+원본 raw data 전체를 새로 돌리기보다, 이미 만들어진 table, figure, report 파일을 기준으로 먼저 검토해줘.
 
 목표:
 - analysis_report.md 작성
@@ -862,16 +856,16 @@
 - 발표에 쓸 수 있는 핵심 figure 후보 3개 정리
 
 검토 기준:
-- sample grouping과 DEG threshold를 먼저 확인
+- sample grouping과 통계 threshold를 먼저 확인
 - axis, p-value, filtering 조건을 figure note에 명시
-- 생물학적 해석은 association과 hypothesis 수준으로 보수적으로 작성
+- 결과 해석은 observation, association, hypothesis 수준을 구분해 보수적으로 작성
 - 도메인 검토가 필요한 문장은 별도 checklist로 분리</pre>
 
     <h3>Context에 포함하면 좋은 항목</h3>
     <ul>
       <li><strong>데이터 설명:</strong> 어떤 실험이고, 어떤 비교를 하는지</li>
       <li><strong>파일 구조:</strong> raw data, processed data, figure, report 위치</li>
-      <li><strong>컬럼 의미:</strong> sample, condition, logFC, p-value, FDR 등</li>
+      <li><strong>컬럼 의미:</strong> sample, condition, effect size, p-value, FDR 등</li>
       <li><strong>분석 목표:</strong> 보고서, figure note, PPT draft, checklist 등</li>
       <li><strong>금지사항:</strong> 원본 수정 금지, 무거운 재분석 금지, 과한 결론 금지</li>
       <li><strong>검토 기준:</strong> threshold, sample grouping, axis, biological interpretation</li>
@@ -936,13 +930,13 @@
     </table>
 
     <h3>간단한 라이브 데모 예시</h3>
-    <pre>Ensembl REST API에서 human KRT14 gene annotation을 받아와서,
-exon/intron 구조를 3D gene viewer HTML로 만들어줘.
-대표 transcript, exon 위치, transcription 방향, gene 좌표를 라벨로 표시하고
+    <pre>공개 데이터 API에서 작은 예시 데이터를 받아와서,
+구조를 이해하기 쉬운 interactive HTML viewer로 만들어줘.
+핵심 좌표, 방향성, 주요 feature를 라벨로 표시하고
 브라우저에서 검증해줘.
 먼저 계획부터 보여줘.</pre>
     <p>
-      이 데모의 장점은 실제 공개 데이터, 웹 API, HTML artifact, 브라우저 검증이 한 번에 들어간다는 점입니다. 연구자가 확인해야 할 것은 실제 좌표, exon 개수, strand 방향, 라벨 위치, 과장된 생물학적 표현 여부입니다.
+      이 데모의 장점은 공개 데이터, 웹 API, HTML artifact, 브라우저 검증이 한 번에 들어간다는 점입니다. 연구자가 확인해야 할 것은 원본 데이터와 라벨이 맞는지, 시각화가 과장되지 않았는지, 설명이 실제 근거를 벗어나지 않았는지입니다.
     </p>
   </section>
 
@@ -958,25 +952,25 @@ exon/intron 구조를 3D gene viewer HTML로 만들어줘.
     </p>
     <pre># AGENTS.md 예시
 - 데이터 원본은 수정하지 않는다.
-- 무거운 FASTQ 재분석은 사용자 확인 후 실행한다.
+- 대용량 원본 데이터 재분석은 사용자 확인 후 실행한다.
 - 결과물은 reports/ 아래 Markdown으로 저장한다.
 - 그림을 만들면 축, 기준, filtering 조건을 함께 기록한다.
 - 결론은 "관찰된 연관"과 "추가 검증 필요"를 구분한다.</pre>
 
     <h3>Skill</h3>
     <p>
-      Skill은 특정 작업 유형에 대한 재사용 가능한 작업 매뉴얼입니다. 예를 들어 bulk RNA-seq 분석에서는 QC, DEG 기준, enrichment, figure 해석, 검증 checklist를 함께 확인하도록 만들 수 있습니다.
+      Skill은 특정 작업 유형에 대한 재사용 가능한 작업 매뉴얼입니다. 예를 들어 연구 데이터 검토에서는 입력 파일, 품질 확인, 통계 기준, figure 해석, 검증 checklist를 함께 확인하도록 만들 수 있습니다.
     </p>
     <pre>---
-name: bulk-rnaseq
-description: End-to-end bulk RNA-seq orchestrator
+name: research-data-review
+description: Review processed research data and produce auditable artifacts
 ---
 
-# Bulk RNA-seq
+# Research Data Review
 
-The pipeline is:
-FastQC/trim -> align/quant -> counts
--> differential expression -> enrichment -> figures</pre>
+The workflow is:
+inspect files -> summarize inputs -> verify analysis criteria
+-> review figures -> separate findings, caveats, and review questions</pre>
 
     <table>
       <thead>
@@ -991,7 +985,7 @@ FastQC/trim -> align/quant -> counts
         <tr>
           <td>예시</td>
           <td>원본 데이터 수정 금지, 결과물 위치, 실행 명령</td>
-          <td>RNA-seq 분석, literature review, scientific visualization</td>
+          <td>data analysis, literature review, scientific visualization</td>
         </tr>
         <tr>
           <td>효과</td>
@@ -1003,39 +997,54 @@ FastQC/trim -> align/quant -> counts
   </section>
 
   <section>
-    <h2>14. Hands-on: keratinocyte RNA-seq 산출물 만들기</h2>
+    <h2>14. Hands-on: 연구 데이터 산출물 만들기</h2>
     <p>
-      이번 실습은 raw FASTQ부터 전체 pipeline을 새로 돌리는 시간이 아닙니다. 이미 준비된 keratinocyte SPF vs GF bulk RNA-seq 분석 결과를 바탕으로, Agent가 파일 구조를 파악하고, Skill 기준에 맞춰 analysis report, figure note, review checklist를 만드는 과정입니다.
+      실습의 핵심은 원본 데이터를 무작정 다시 분석하는 것이 아니라, 이미 준비된 분석 결과 폴더를 Agent가 읽고 검토 가능한 산출물로 정리하는 과정입니다. 데이터 종류가 RNA-seq, imaging, proteomics, survey, clinical table 중 무엇이든 기본 구조는 비슷합니다.
     </p>
 
-    <h3>실습 데이터 개요</h3>
-    <ul>
-      <li>비교: SPF-adult-KC n=3 vs GF-adult-KC n=3</li>
-      <li>DEG 기준: |FC| >= 1.5 및 raw p &lt; 0.05</li>
-      <li>DEG 수: 총 754개, SPF-high 471개, GF-high 283개</li>
-      <li>FDR &lt; 0.05: 510개</li>
-      <li>실습 ZIP에는 원시 FASTQ를 제외한 분석 완료 산출물이 포함됩니다.</li>
-    </ul>
-
-    <figure class="figure-card">
-      <img src="../assets/keratinocyte/dashboard-summary.png" alt="Keratinocyte 분석 대시보드 요약" />
-      <figcaption>Keratinocyte SPF vs GF bulk RNA-seq 분석 요약. 실습에서는 이 결과를 읽고 검토 가능한 report와 figure note를 만듭니다.</figcaption>
-    </figure>
+    <h3>실습에서 확인할 기본 구조</h3>
+    <table>
+      <thead>
+        <tr><th>확인 항목</th><th>질문</th><th>예시 산출물</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Inputs</td>
+          <td>어떤 파일을 근거로 삼는가?</td>
+          <td>file_inventory.md, input_summary.md</td>
+        </tr>
+        <tr>
+          <td>Analysis Criteria</td>
+          <td>비교군, threshold, filtering, 통계 기준은 무엇인가?</td>
+          <td>analysis_report.md</td>
+        </tr>
+        <tr>
+          <td>Figures</td>
+          <td>각 그림의 message, axis, color, caveat는 무엇인가?</td>
+          <td>figure_review.md</td>
+        </tr>
+        <tr>
+          <td>Human Review</td>
+          <td>사람이 최종 판단해야 하는 해석은 무엇인가?</td>
+          <td>review_checklist.md</td>
+        </tr>
+      </tbody>
+    </table>
 
     <h3>Skill 설치 prompt</h3>
     <pre>아래 GitHub 저장소의 scientific-agent-skills를 Codex에서 사용할 수 있게 설치해줘.
 https://github.com/K-Dense-AI/scientific-agent-skills
 
 설치 후에는 사용 가능한 skill 목록을 확인하고,
-이번 keratinocyte RNA-seq 실습에 어떤 skill을 쓰는 것이 좋은지 제안해줘.</pre>
+이번 연구 데이터 폴더에 어떤 skill을 쓰는 것이 좋은지 제안해줘.</pre>
 
     <h3>실습 시작 prompt</h3>
-    <pre>scientific-agent-skills를 사용해서 이 keratinocyte SPF vs GF RNA-seq 폴더를 분석해줘.
+    <pre>scientific-agent-skills를 사용해서 이 연구 데이터 분석 결과 폴더를 검토해줘.
 
 주의:
-- raw FASTQ 재분석은 하지 말고, 이미 있는 분석 결과와 figure를 기준으로 봐줘.
+- 원본 raw data 전체를 새로 분석하지 말고, 이미 있는 table, figure, report를 먼저 기준으로 봐줘.
 - 먼저 파일 구조와 사용 가능한 산출물을 요약해줘.
-- bulk-rnaseq skill 기준으로 QC, DEG, enrichment, figure review 항목을 정리해줘.
+- 데이터 유형에 맞는 skill 기준으로 QC, 통계 기준, figure review 항목을 정리해줘.
 - scientific-visualization skill 기준으로 figure note를 만들어줘.
 
 만들 산출물:
@@ -1052,8 +1061,8 @@ https://github.com/K-Dense-AI/scientific-agent-skills
       <tbody>
         <tr>
           <td>analysis_report.md</td>
-          <td>데이터 구조, 비교군, DEG 기준, 주요 결과, 보수적 해석</td>
-          <td>sample grouping, threshold, FDR, raw p-value 구분</td>
+          <td>데이터 구조, 비교군, 통계 기준, 주요 결과, 보수적 해석</td>
+          <td>sample grouping, threshold, multiple testing 여부 구분</td>
         </tr>
         <tr>
           <td>figure_review.md</td>
@@ -1072,21 +1081,6 @@ https://github.com/K-Dense-AI/scientific-agent-skills
         </tr>
       </tbody>
     </table>
-
-    <div class="three-col">
-      <figure class="figure-card">
-        <img src="../assets/keratinocyte/volcano-spf-gf.png" alt="SPF vs GF volcano plot" />
-        <figcaption>Volcano plot. 축, threshold, p-value 기준, filtering 조건을 확인합니다.</figcaption>
-      </figure>
-      <figure class="figure-card">
-        <img src="../assets/keratinocyte/targeted-panel.png" alt="Targeted biology panel" />
-        <figcaption>Targeted panel. 도메인 검토가 가장 많이 필요한 산출물입니다.</figcaption>
-      </figure>
-      <figure class="figure-card">
-        <img src="../assets/keratinocyte/marker-heatmap.png" alt="Selected marker heatmap" />
-        <figcaption>Marker heatmap. marker 선정 기준을 함께 설명해야 합니다.</figcaption>
-      </figure>
-    </div>
   </section>
 
   <section>
@@ -1099,7 +1093,7 @@ https://github.com/K-Dense-AI/scientific-agent-skills
         <tr>
           <td><strong>/goal</strong></td>
           <td>긴 작업의 목표를 고정하고 싶을 때</td>
-          <td>실습 전체 목표를 "RNA-seq report와 figure review 생성"으로 설정</td>
+          <td>실습 전체 목표를 "analysis report와 figure review 생성"으로 설정</td>
         </tr>
         <tr>
           <td><strong>Plan mode</strong></td>
@@ -1114,7 +1108,7 @@ https://github.com/K-Dense-AI/scientific-agent-skills
         <tr>
           <td><strong>Skills</strong></td>
           <td>반복 작업의 기준을 안정화하고 싶을 때</td>
-          <td>bulk-rnaseq, scientific-visualization, literature-review</td>
+          <td>data-analysis, scientific-visualization, literature-review</td>
         </tr>
         <tr>
           <td><strong>Verify</strong></td>
@@ -1243,7 +1237,7 @@ causal claim처럼 들리는 표현은 낮춰줘.</pre>
     <ul class="compact-list">
       <li>분석 대상 sample과 condition이 맞는가?</li>
       <li>비교군이 연구 질문과 일치하는가?</li>
-      <li>DEG threshold와 p-value/FDR 기준이 명확한가?</li>
+      <li>effect size, threshold, p-value/FDR 기준이 명확한가?</li>
       <li>axis, scale, color legend가 figure note에 설명되어 있는가?</li>
       <li>marker 선정 기준이 기록되어 있는가?</li>
       <li>enrichment 결과를 단일 pathway로 과장하지 않았는가?</li>

@@ -47,6 +47,63 @@ function observeAnimatedSections() {
   animatedBlocks.forEach((block) => observer.observe(block));
 }
 
+function prepareSlideReveals() {
+  const revealSelectors = [
+    ".kicker",
+    "h1",
+    "h2",
+    "h3",
+    ".lead",
+    ".hero-actions",
+    ".definition-note",
+    ".context-insight",
+    ".quote-block",
+    ".signal-panel",
+    ".case-card",
+    ".paper-card",
+    ".terminal-card",
+    ".choice-grid > *",
+    ".concept-grid > *",
+    ".frontier-grid > *",
+    ".mention-list > *",
+    ".step-grid > *",
+    ".demo-flow > *",
+    ".workflow-strip > *",
+    ".flow-diagram > *",
+    ".capability-list > *",
+    ".rule-stack > *",
+    ".checklist > *",
+    ".skill-stack > *",
+    ".matrix > *",
+    ".metric-row > *",
+    ".practice-actions > *",
+    ".cover-points > *",
+    ".outcome-card",
+    ".skill-file-preview",
+    ".kden-skill-card",
+    ".llm-open-card",
+    ".mini-pipeline > *",
+    ".artifact-gallery > *",
+    ".analysis-figure",
+    ".figure-grid > *",
+    ".education-visual-wrap",
+    ".education-actions > *",
+  ].join(",");
+
+  getSlides().forEach((slide) => {
+    const seen = new Set();
+    const items = Array.from(slide.querySelectorAll(revealSelectors)).filter((item) => {
+      if (seen.has(item)) return false;
+      seen.add(item);
+      return !item.closest(".modal-root");
+    });
+    items.forEach((item, index) => {
+      item.classList.add("reveal-item");
+      item.style.setProperty("--reveal-index", String(Math.min(index, 14)));
+    });
+  });
+}
+
 function getSlides() {
   return Array.from(document.querySelectorAll(".slide"));
 }
@@ -65,6 +122,11 @@ function updateProgress() {
   }
 
   activeSlideIndex = activeIndex;
+  slides.forEach((slide, index) => {
+    slide.classList.toggle("is-active", index === activeIndex);
+    slide.classList.toggle("is-before", index < activeIndex);
+    slide.classList.toggle("is-after", index > activeIndex);
+  });
   currentSlide.textContent = String(activeIndex + 1).padStart(2, "0");
   const activeSection = slides[activeIndex]?.dataset.section;
   navLinks.forEach((link) => {
@@ -171,6 +233,7 @@ window.addEventListener("load", () => {
 });
 
 renderSlides();
+prepareSlideReveals();
 observeAnimatedSections();
 totalSlides.textContent = String(getSlides().length).padStart(2, "0");
 if (window.location.hash) {
