@@ -727,7 +727,7 @@ FastQC/trim → align/quant → counts
 	          <p class="kicker">Part 4</p>
 	          <h2>AI 도구 소개</h2>
 	          <p class="lead narrow">
-	            도구를 외우기보다,<br>어떤 workflow에 붙일지 기준을 잡습니다.
+	            연구 과정에서 활용해볼 만한<br>추가 AI 도구들을 간단히 소개합니다.
 	          </p>
 	          <div class="cover-points">
 	            <span>OpenAI</span>
