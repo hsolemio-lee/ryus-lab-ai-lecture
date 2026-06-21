@@ -762,7 +762,7 @@ FastQC/trim → align/quant → counts
     html: `
 <div class="slide-inner">
           <p class="kicker">Mention Only</p>
-          <h2>나머지는 용도별로 이름만 알아두기</h2>
+          <h2>참고하면 좋은 연구용 AI 툴</h2>
           <div class="mention-list">
             <button data-modal="modal-elicit"><strong>Elicit</strong><span>질문 기반 Literature Review</span></button>
             <button data-modal="modal-researchrabbit"><strong>ResearchRabbit</strong><span>Citation Network 탐색</span></button>
