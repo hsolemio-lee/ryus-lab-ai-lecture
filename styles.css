@@ -1808,6 +1808,7 @@ h3 {
   align-items: center;
   justify-content: center;
   padding: 24px;
+  perspective: 1200px;
 }
 
 .modal-root.open {
@@ -1819,6 +1820,8 @@ h3 {
   inset: 0;
   background: rgba(11, 16, 14, 0.56);
   backdrop-filter: blur(9px);
+  opacity: 0;
+  animation: modalBackdropIn 260ms ease forwards;
 }
 
 .modal {
@@ -1831,6 +1834,10 @@ h3 {
   background: #fff;
   box-shadow: 0 36px 100px rgba(0, 0, 0, 0.34);
   padding: 34px;
+  opacity: 0;
+  transform: translate3d(0, 24px, 0) scale(0.965) rotateX(4deg);
+  transform-origin: 50% 44%;
+  animation: modalPanelIn 420ms var(--ease-out) forwards;
 }
 
 .modal-close {
@@ -1882,6 +1889,103 @@ h3 {
   background: #111816;
   color: #e8f5ef;
   line-height: 1.5;
+}
+
+.prompt-block {
+  position: relative;
+  margin: 18px 0;
+}
+
+.prompt-block pre {
+  min-height: 68px;
+  margin: 0;
+  padding-top: 44px;
+  border: 1px solid rgba(125, 211, 199, 0.16);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05), 0 16px 46px rgba(17, 24, 22, 0.12);
+}
+
+.prompt-block::before {
+  content: attr(data-label);
+  position: absolute;
+  top: 14px;
+  left: 16px;
+  z-index: 2;
+  color: #7dd3c7;
+  font-size: 0.68rem;
+  font-weight: 900;
+  letter-spacing: 0.11em;
+}
+
+.copy-prompt {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 3;
+  min-height: 30px;
+  padding: 6px 10px;
+  border: 1px solid rgba(125, 211, 199, 0.28);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+  color: #e8f5ef;
+  font-size: 0.76rem;
+  font-weight: 850;
+  backdrop-filter: blur(10px);
+  transition:
+    background 160ms ease,
+    border-color 160ms ease,
+    color 160ms ease,
+    transform 160ms ease;
+}
+
+.copy-prompt:hover {
+  transform: translateY(-1px);
+  border-color: rgba(125, 211, 199, 0.56);
+  background: rgba(125, 211, 199, 0.14);
+}
+
+.copy-prompt.copied {
+  border-color: rgba(125, 211, 199, 0.72);
+  background: rgba(125, 211, 199, 0.2);
+  color: #a7f3d0;
+}
+
+.prompt-block pre.typing::after {
+  content: "";
+  display: inline-block;
+  width: 0.58em;
+  height: 1.1em;
+  margin-left: 2px;
+  border-right: 2px solid #7dd3c7;
+  transform: translateY(0.18em);
+  animation: caretBlink 760ms steps(1) infinite;
+}
+
+@keyframes modalBackdropIn {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes modalPanelIn {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 28px, 0) scale(0.965) rotateX(5deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scale(1) rotateX(0deg);
+  }
+}
+
+@keyframes caretBlink {
+  0%,
+  49% {
+    opacity: 1;
+  }
+  50%,
+  100% {
+    opacity: 0;
+  }
 }
 
 .context-scale {

@@ -8,6 +8,7 @@ const modalKicker = document.querySelector("#modalKicker");
 const modalTitle = document.querySelector("#modalTitle");
 const modalContent = document.querySelector("#modalContent");
 let activeSlideIndex = 0;
+const typedPromptCache = new Set();
 
 if ("scrollRestoration" in history) {
   history.scrollRestoration = "manual";
@@ -167,6 +168,128 @@ function jumpToHash() {
   document.documentElement.style.scrollBehavior = previousBehavior;
 }
 
+function getPreBlockKind(text) {
+  const trimmed = text.trim();
+  if (/^---/.test(trimmed) || /SKILL\.md|The pipeline is|Statistically sound/i.test(trimmed)) {
+    return { label: "SKILL", shouldType: false };
+  }
+  if (/^# AGENTS\.md|AGENTS\.md 예시/i.test(trimmed)) {
+    return { label: "AGENTS.md", shouldType: false };
+  }
+  if (/^\$ /.test(trimmed)) {
+    return { label: "COMMAND", shouldType: false };
+  }
+  if (/^</.test(trimmed) || /<\/[a-z]+>/i.test(trimmed)) {
+    return { label: "HTML", shouldType: false };
+  }
+  if (/^# |^\| |입력:|모델 내부:|최종 출력:|목표 설정|→/m.test(trimmed)) {
+    return { label: "EXAMPLE", shouldType: false };
+  }
+  if (/해줘|보여줘|알려줘|만들어줘|정리해줘|설명해줘|검토해줘|찾아줘|사용해서|설치해|저장|진행|계획|분석|발표|논문|데이터/.test(trimmed)) {
+    return { label: "PROMPT", shouldType: true };
+  }
+  return { label: "EXAMPLE", shouldType: false };
+}
+
+function enhancePromptBlocks(modalId) {
+  modalContent.querySelectorAll("pre").forEach((pre, index) => {
+    const originalText = pre.textContent;
+    const promptId = `${modalId}:${index}:${originalText.length}:${originalText.slice(0, 24)}`;
+    const blockKind = getPreBlockKind(originalText);
+    const wrapper = document.createElement("div");
+    wrapper.className = "prompt-block";
+    wrapper.dataset.promptId = promptId;
+    wrapper.dataset.label = blockKind.label;
+
+    const copyButton = document.createElement("button");
+    copyButton.type = "button";
+    copyButton.className = "copy-prompt";
+    copyButton.textContent = "복사";
+    copyButton.setAttribute("aria-label", "프롬프트 복사");
+    copyButton.dataset.copyText = originalText;
+
+    pre.parentNode.insertBefore(wrapper, pre);
+    wrapper.append(copyButton, pre);
+
+    if (!blockKind.shouldType || typedPromptCache.has(promptId) || window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      pre.textContent = originalText;
+      pre.classList.add("typed-complete");
+      return;
+    }
+
+    typedPromptCache.add(promptId);
+    pre.textContent = "";
+    pre.classList.add("typing");
+
+    const maxDuration = 1700;
+    const minDuration = 520;
+    const duration = Math.min(maxDuration, Math.max(minDuration, originalText.length * 11));
+    const startedAt = performance.now();
+
+    function typeFrame(now) {
+      const progress = Math.min(1, (now - startedAt) / duration);
+      const eased = 1 - Math.pow(1 - progress, 2.4);
+      const nextLength = Math.floor(originalText.length * eased);
+      pre.textContent = originalText.slice(0, nextLength);
+
+      if (progress < 1) {
+        requestAnimationFrame(typeFrame);
+      } else {
+        pre.textContent = originalText;
+        pre.classList.remove("typing");
+        pre.classList.add("typed-complete");
+      }
+    }
+
+    requestAnimationFrame(typeFrame);
+  });
+}
+
+async function copyPrompt(button) {
+  const text = button.dataset.copyText || "";
+  if (!text) return;
+
+  try {
+    let copied = false;
+    if (navigator.clipboard?.writeText) {
+      try {
+        await navigator.clipboard.writeText(text);
+        copied = true;
+      } catch {
+        copied = false;
+      }
+    }
+
+    if (!copied) {
+      const textarea = document.createElement("textarea");
+      textarea.value = text;
+      textarea.setAttribute("readonly", "");
+      textarea.style.position = "fixed";
+      textarea.style.opacity = "0";
+      textarea.style.pointerEvents = "none";
+      document.body.appendChild(textarea);
+      textarea.focus();
+      textarea.select();
+      copied = document.execCommand("copy");
+      textarea.remove();
+    }
+
+    if (!copied) throw new Error("Copy command failed");
+
+    button.textContent = "복사됨";
+    button.classList.add("copied");
+    setTimeout(() => {
+      button.textContent = "복사";
+      button.classList.remove("copied");
+    }, 1400);
+  } catch {
+    button.textContent = "실패";
+    setTimeout(() => {
+      button.textContent = "복사";
+    }, 1400);
+  }
+}
+
 function openModal(id) {
   const data = window.MODALS[id];
   if (!data) return;
@@ -174,6 +297,7 @@ function openModal(id) {
   modalKicker.textContent = data.kicker;
   modalTitle.textContent = data.title;
   modalContent.innerHTML = data.body;
+  enhancePromptBlocks(id);
   modalPanel.classList.toggle("wide-modal", data.size === "wide");
   modalRoot.classList.add("open");
   modalRoot.setAttribute("aria-hidden", "false");
@@ -188,6 +312,12 @@ function closeModal() {
 }
 
 document.addEventListener("click", (event) => {
+  const copyButton = event.target.closest(".copy-prompt");
+  if (copyButton) {
+    copyPrompt(copyButton);
+    return;
+  }
+
   const trigger = event.target.closest("[data-modal]");
   if (trigger) openModal(trigger.dataset.modal);
 
