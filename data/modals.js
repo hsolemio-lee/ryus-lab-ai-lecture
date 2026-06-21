@@ -29,7 +29,7 @@ window.MODALS = {
   },
   "modal-profile": {
     kicker: "CV",
-    title: "강사 소개 메모",
+    title: "이한솔 소개",
     body: `
       <ul>
         <li>Samsung SDS Senior Software Engineer, 2017.08 - 현재</li>
@@ -216,12 +216,12 @@ window.MODALS = {
     kicker: "Demo Paper",
     title: "사용할 논문",
     body: `
-      <p>데모 논문은 <strong>Skin microbe-dependent TSLP-ILC2 priming axis in early life is co-opted in allergic inflammation</strong>입니다. skin microbiota, keratinocyte-derived TSLP, ILC2 priming, AD-like inflammation이 Figure 흐름으로 선명하게 이어져 journal club 준비 예시로 좋습니다.</p>
+      <p>데모 논문은 <strong>Skin microbe-dependent TSLP-ILC2 priming axis in early life is co-opted in allergic inflammation</strong>입니다. skin microbiota, keratinocyte-derived TSLP, ILC2 priming, AD-like inflammation이 Figure 흐름으로 선명하게 이어집니다.</p>
       <ul>
-        <li>데모 목표: 논문을 대신 읽게 하는 것이 아니라, 발표 준비 절차를 Agent와 함께 구조화하는 모습을 보여주기</li>
-        <li>절차 적합성: Graphical abstract, Highlights, Summary, Figure 1-7의 실험 흐름이 명확해서 우측 절차를 그대로 활용할 수 있습니다.</li>
+        <li>목표: 논문 요약을 맡기는 것이 아니라, 발표 준비 절차를 Agent와 함께 구조화합니다.</li>
+        <li>절차 적합성: Graphical abstract, Highlights, Summary, Figure 1-7의 실험 흐름이 명확합니다.</li>
         <li>Figure 흐름: microbiota deficiency -> neonatal window -> TSLP in keratinocytes -> <em>S. lentus</em> -> IAld-producing Staphylococcus -> adult AD-like inflammation</li>
-        <li>강조점: Plan mode로 먼저 작업 계획을 세우고, 요약, figure map, 발표 목차, 검토 질문, 대본 초안, PPTX 산출물을 순서대로 만들되 최종 해석은 연구자가 검토</li>
+        <li>진행 방식: Plan mode로 작업 계획을 세운 뒤 요약, figure map, 발표 목차, 검토 질문, 대본 초안, PPTX 산출물을 순서대로 만듭니다.</li>
       </ul>
     `,
   },
@@ -229,45 +229,45 @@ window.MODALS = {
     kicker: "Plan Mode",
     title: "먼저 발표 준비 계획을 세우기",
     body: `
-      <p>라이브 데모는 바로 "논문 요약해줘"로 시작하지 않고, Plan mode에서 발표 준비 workflow를 먼저 설계하는 장면으로 시작합니다.</p>
+      <p>바로 "논문 요약해줘"로 시작하지 않고, Plan mode에서 발표 준비 workflow를 먼저 설계합니다.</p>
       <pre>이 PDF 논문을 연구실 journal club 발표로 준비하려고 해.
 바로 요약하지 말고, 먼저 발표 준비 계획을 세워줘.
 목표는 15분 발표이고, figure 중심으로 설명하고 싶어.
 사람이 검토해야 할 지점도 계획에 포함해줘.</pre>
-      <p>Agent가 계획을 내면, 발표자는 청중과 강조점을 수정합니다.</p>
+      <p>Agent가 계획을 내면, 발표 대상과 핵심 초점을 추가해 방향을 좁힙니다.</p>
       <pre>좋아. 발표 대상은 피부/면역 쪽 연구자들이고,
 skin microbiota, TSLP, ILC2 priming, AD-like inflammation의 연결에 집중하고 싶어.
 Figure별 설명은 너무 길지 않게 하고,
 journal club 질문을 마지막에 넣어줘.</pre>
-      <p>이 장면의 핵심은 AI에게 정답을 맡기는 것이 아니라, 사람이 검토할 수 있는 작업 순서와 중간 산출물을 먼저 합의한다는 점입니다.</p>
+      <p>핵심은 AI에게 정답을 맡기는 것이 아니라, 사람이 검토할 수 있는 작업 순서와 중간 산출물을 먼저 합의하는 것입니다.</p>
     `,
   },
   "modal-paper-demo-1": {
     kicker: "Prompt 1",
     title: "논문 구조화",
     body: `
-      <p>첫 요청은 논문 전체를 바로 요약하게 하기보다, 발표 준비에 필요한 뼈대를 만들게 합니다.</p>
+      <p>첫 요청은 논문 전체 요약보다, 발표 준비에 필요한 뼈대를 만드는 데 둡니다.</p>
       <pre>이 논문을 연구실 journal club 발표 준비용으로 읽어줘.
 먼저 1) 핵심 질문, 2) 주요 결론, 3) 실험 흐름, 4) 발표자가 조심해야 할 해석을 나눠서 정리해줘.
 과장된 결론은 피하고, 논문 안에서 직접 보이는 근거와 추정이 필요한 내용을 구분해줘.</pre>
-      <p>이 단계에서 AI가 만든 결과는 "초안"입니다. 제목, abstract, figure caption 중심으로 빠르게 지도를 만드는 용도입니다.</p>
+      <p>AI가 만든 결과는 최종 해석이 아니라 초안입니다. 제목, abstract, figure caption을 바탕으로 빠르게 지도를 만드는 용도입니다.</p>
     `,
   },
   "modal-paper-demo-2": {
     kicker: "Prompt 2",
     title: "발표 목차 만들기",
     body: `
-      <p>두 번째 요청은 논문 내용을 발표 시간과 청중에 맞게 재구성하는 단계입니다.</p>
+      <p>다음 요청은 논문 내용을 발표 시간과 대상에 맞게 재구성하는 것입니다.</p>
       <pre>이 논문을 15분 연구실 발표로 구성한다면 슬라이드 목차를 만들어줘.
 각 슬라이드는 제목, 말할 핵심 문장, 들어갈 figure 또는 panel, 청중에게 던질 질문을 포함해줘.</pre>
-      <p>좋은 결과물은 단순한 section 요약이 아니라, "왜 이 실험이 다음 실험으로 이어지는지"를 보여주는 발표 흐름입니다.</p>
+      <p>좋은 결과물은 단순한 section 요약이 아니라, "왜 이 실험이 다음 실험으로 이어지는지"가 드러나는 발표 흐름입니다.</p>
     `,
   },
   "modal-paper-demo-3": {
     kicker: "Prompt 3",
     title: "Figure별 해석",
     body: `
-      <p>논문 발표의 핵심은 figure입니다. AI에게 figure별로 질문, 방법, 결과, 해석, 한계를 분리하게 하면 발표자가 검토하기 좋아집니다.</p>
+      <p>논문 발표의 핵심은 figure입니다. figure별 질문, 방법, 결과, 해석, 한계를 분리하면 검토하기 쉬워집니다.</p>
       <pre>Figure별로 무엇을 보여주는지 정리해줘.
 각 figure에 대해:
 - 실험 질문
@@ -276,14 +276,14 @@ journal club 질문을 마지막에 넣어줘.</pre>
 - 저자 해석
 - 발표자가 검토해야 할 한계
 를 표로 만들어줘.</pre>
-      <p>이 단계에서 중요한 것은 "저자 해석"과 "내가 발표에서 말해도 되는 해석"을 분리하는 것입니다.</p>
+      <p>중요한 것은 "저자 해석"과 "내가 발표에서 말해도 되는 해석"을 분리하는 것입니다.</p>
     `,
   },
   "modal-paper-demo-4": {
     kicker: "Prompt 4",
     title: "검토 질문 뽑기",
     body: `
-      <p>AI가 가장 유용한 순간 중 하나는 발표자가 놓칠 수 있는 질문을 미리 뽑아주는 것입니다.</p>
+      <p>AI는 놓치기 쉬운 검토 질문을 미리 뽑는 데 유용합니다.</p>
       <pre>이 논문에서 AI가 바로 결론처럼 말하면 위험한 부분을 찾아줘.
 예를 들어 neonatal mouse microbiota 결과를 human atopic dermatitis로 확장할 때 조심해야 할 점을 정리해줘.
 그리고 journal club에서 나올 만한 질문 5개를 만들어줘.</pre>
@@ -299,19 +299,19 @@ journal club 질문을 마지막에 넣어줘.</pre>
     kicker: "Prompt 5",
     title: "대본 초안 작성",
     body: `
-      <p>마지막으로 발표자가 실제로 말할 수 있는 톤으로 introduction script를 만들게 합니다. 이때 청중 수준과 말투를 지정해야 결과가 좋아집니다.</p>
+      <p>마지막으로 실제로 말할 수 있는 톤의 introduction script를 만듭니다. 대상과 말투를 지정해야 결과가 좋아집니다.</p>
       <pre>이 논문을 연구실에서 발표한다고 가정하고,
 첫 3분짜리 introduction script를 한국어로 써줘.
 너무 대중강연처럼 쓰지 말고, 생명과학 연구자 대상 톤으로 써줘.
 그리고 각 문장 옆에 어떤 figure 또는 배경 설명과 연결되는지 표시해줘.</pre>
-      <p>강의에서는 여기서 "대본은 시작점일 뿐이고, 발표자의 이해와 figure 검토가 들어가야 진짜 발표가 된다"는 메시지를 연결합니다.</p>
+      <p>대본은 시작점입니다. 실제 발표에서는 논문 이해와 figure 검토가 반드시 함께 들어가야 합니다.</p>
     `,
   },
   "modal-paper-demo-6": {
     kicker: "Prompt 6",
     title: "PPTX 산출물 만들기",
     body: `
-      <p>마지막 단계에서는 지금까지 만든 발표 목차, figure map, 검토 질문, 발표 대본을 바탕으로 실제 PowerPoint 파일을 만들게 합니다.</p>
+      <p>마지막 단계에서는 지금까지 만든 발표 목차, figure map, 검토 질문, 발표 대본을 바탕으로 실제 PowerPoint 파일을 만듭니다.</p>
       <pre>지금까지 정리한 내용을 바탕으로 연구실 journal club용 PPTX를 만들어줘.
 조건:
 - 15분 발표 분량
@@ -328,7 +328,7 @@ journal club 질문을 마지막에 넣어줘.</pre>
 - 발표자 노트가 실제 발표에 충분한지
 - 남은 검토 필요 항목이 무엇인지
 체크리스트로 알려줘.</pre>
-      <p>강의 메시지는 분명합니다. Agent는 PPT 파일까지 만들 수 있지만, figure 사용 권한, 해석의 강도, 발표자의 이해는 사람이 마지막에 확인해야 합니다.</p>
+      <p>Agent는 PPT 파일까지 만들 수 있지만, figure 사용 권한, 해석의 강도, 발표자의 이해는 사람이 마지막에 확인해야 합니다.</p>
     `,
   },
   "modal-workflow-question": {
@@ -339,7 +339,7 @@ journal club 질문을 마지막에 넣어줘.</pre>
       <ul>
         <li>OEGlobal Connect의 Elicit 사용 사례에서는 "How effective is open education in Asia?" 같은 넓은 질문을 넣고, 더 구체적인 검색 질문 제안을 확인하는 흐름이 소개됩니다.</li>
         <li>Elicit은 특히 "무엇이 무엇에 어떤 영향을 주는가?"처럼 empirical research 질문에 강하다는 설명이 공유되었습니다.</li>
-        <li>강의 적용: "이 연구 질문에서 intervention, outcome, population, comparison을 분리해줘"라고 요청하면 가설과 대조군을 정리하는 출발점이 됩니다.</li>
+        <li>활용 예시: "이 연구 질문에서 intervention, outcome, population, comparison을 분리해줘"라고 요청하면 가설과 대조군을 정리하는 출발점이 됩니다.</li>
       </ul>
       <p><a href="https://connect.oeglobal.org/t/eliciting-effectiveness-of-elicit-ai-research-lit-review-tool/4191" target="_blank" rel="noreferrer">OEGlobal Connect - Elicit 사용 사례</a></p>
     `,
@@ -367,7 +367,7 @@ journal club 질문을 마지막에 넣어줘.</pre>
       <p>데이터 분석은 연구자가 AI를 실제 업무에 붙이기 좋은 영역입니다. 다만 "분석해줘"라고 맡기는 것보다, 분석 관례와 검증 절차를 스킬로 묶어 실행하게 하는 편이 훨씬 안정적입니다.</p>
       <ul>
         <li><strong>K-Dense-AI/scientific-agent-skills</strong>는 연구 분석 작업에 필요한 절차, 체크리스트, 도구 사용 방식을 Agent가 따르게 만드는 예시로 사용할 수 있습니다.</li>
-        <li>강의 실습에서는 keratinocyte SPF vs GF bulk RNA-seq 폴더를 대상으로, Agent가 먼저 파일 구조와 기존 산출물을 파악하게 합니다.</li>
+        <li>keratinocyte SPF vs GF bulk RNA-seq 폴더에서는 Agent가 먼저 파일 구조와 기존 산출물을 파악하게 합니다.</li>
         <li>그다음 DEG, QC, KEGG/GO, targeted panel, figure 후보를 정리하고, "안전한 주장"과 "도메인 검토가 필요한 해석"을 분리합니다.</li>
         <li>핵심은 모델이 데이터를 대신 판단하는 것이 아니라, 연구자가 검토할 수 있는 분석 노트와 재현 가능한 산출물을 만드는 것입니다.</li>
       </ul>
@@ -393,7 +393,7 @@ scientific-agent-skills의 연구 분석 workflow를 따른다고 가정하고,
       <ul>
         <li>활용 가능: outline 만들기, 문장 다듬기, reviewer 관점 질문 만들기, 논리 흐름 점검</li>
         <li>주의 필요: 데이터나 결과를 과장하는 문장, 존재하지 않는 citation, 저자 기여와 disclosure 문제</li>
-        <li>강의 적용: "이 문단에서 주장과 근거가 분리되어 있는지 확인해줘"처럼 검토 도구로 쓰는 편이 안전합니다.</li>
+        <li>활용 예시: "이 문단에서 주장과 근거가 분리되어 있는지 확인해줘"처럼 검토 도구로 쓰는 편이 안전합니다.</li>
       </ul>
       <p><a href="https://www.nature.com/articles/d41586-025-01463-8" target="_blank" rel="noreferrer">Nature - AI writing survey of researchers</a></p>
     `,
@@ -402,7 +402,7 @@ scientific-agent-skills의 연구 분석 workflow를 따른다고 가정하고,
     kicker: "Models",
     title: "프론티어 모델 차이",
     body: `
-      <p>모델마다 강점은 분명히 있습니다. 다만 강의에서 강조할 점은 "어떤 모델이 무조건 최고인가"가 아니라, 작업에 맞는 모델과 workflow를 고르는 능력입니다.</p>
+      <p>모델마다 강점은 분명히 있습니다. 다만 중요한 것은 "어떤 모델이 무조건 최고인가"가 아니라, 작업에 맞는 모델과 workflow를 고르는 능력입니다.</p>
       <ul>
         <li><strong>ChatGPT 계열:</strong> 도구 생태계, 데이터 분석, 코드 실행, 문서 작성 workflow에 강점을 보이는 경우가 많습니다.</li>
         <li><strong>Claude 계열:</strong> 긴 문서 읽기, 논리 구조 점검, 원고/리뷰 피드백에서 좋은 경험을 주는 경우가 많습니다.</li>
@@ -483,7 +483,7 @@ scientific-agent-skills의 연구 분석 workflow를 따른다고 가정하고,
     kicker: "Research Review",
     title: "차지민 박사와의 분석 검토 루프",
     body: `
-      <p>참고 세션에서는 분석 요청이 단순한 답변으로 끝나지 않고, 연구자 피드백을 반영하며 기준 문서, 테스트, HTML 시각화, 최종 선별 패키지, PPT 변환, 전달 단계까지 이어졌습니다.</p>
+      <p>분석 요청은 단순한 답변으로 끝나지 않고, 연구자 피드백을 반영하며 기준 문서, 테스트, HTML 시각화, 최종 선별 패키지, PPT 변환, 전달 단계까지 이어졌습니다.</p>
       <div class="dialogue">
         <p><strong>사용자:</strong> "C, P는 구분하지말고 한그룹으로 묶어"</p>
         <p><strong>Agent:</strong> "그럼 PCA는 C/P를 평균내서 조건당 1점으로 보겠습니다."</p>
@@ -572,7 +572,7 @@ scientific-agent-skills의 연구 분석 workflow를 따른다고 가정하고,
         <li><strong>Presentation:</strong> 최종 HTML들을 PNG로 렌더링한 뒤 9-slide PPTX로 변환</li>
         <li><strong>Delivery:</strong> PPTX 첨부 메일까지 작성해 전달</li>
       </ul>
-      <p>이 예시는 Agent가 분석, 시각화, 검증, 패키징, 전달 준비까지 이어갈 수 있지만, 분석 단위와 해석 강도는 연구자 피드백이 계속 들어가야 안정적이라는 점을 보여줍니다.</p>
+      <p>Agent는 분석, 시각화, 검증, 패키징, 전달 준비까지 이어갈 수 있습니다. 다만 분석 단위와 해석 강도는 연구자 피드백이 들어가야 안정적입니다.</p>
     `,
   },
   "modal-jimin-case-1": {
@@ -877,7 +877,7 @@ analysis report와 figure review checklist를 만들어줘.</pre>
     title: "Frontier Model",
     body: `
       <p>Frontier Model은 현재 가장 성능이 높은 최상위 AI 모델군을 가리키는 말입니다. 특정 회사 하나가 아니라 ChatGPT, Claude, Gemini 같은 최신 고성능 모델들을 묶어 부를 때 씁니다.</p>
-      <p><strong>강의에서의 의미</strong></p>
+      <p><strong>왜 중요한가</strong></p>
       <ul>
         <li>긴 논문과 여러 파일을 읽을 수 있음</li>
         <li>추론, 코딩, 데이터 분석, 문서 작성 능력이 높음</li>
@@ -934,7 +934,7 @@ Figure 1-7 흐름을 발표 목차로 정리해줘.</pre>
     title: "Artifact",
     body: `
       <p>Artifact는 AI가 만든 검토 가능한 산출물입니다. 답변 텍스트만이 아니라 파일로 남는 report, table, plot, PPT draft, HTML dashboard를 말합니다.</p>
-      <p><strong>강의에서의 artifact 예시</strong></p>
+      <p><strong>Artifact 예시</strong></p>
       <ul>
         <li>논문 발표용 PPTX draft</li>
         <li>RNA-seq analysis report</li>
@@ -997,7 +997,7 @@ Figure 1-7 흐름을 발표 목차로 정리해줘.</pre>
       <pre>$ python analyze.py
 $ ls reports/
 $ node --check script.js</pre>
-      <p>강의 중 <code>$ codex</code>처럼 보이는 검은 박스는 "Agent에게 이런 목표를 주면 terminal과 파일을 이용해 실제 작업을 한다"는 예시입니다.</p>
+      <p><code>$ codex</code>처럼 보이는 검은 박스는 "Agent에게 이런 목표를 주면 terminal과 파일을 이용해 실제 작업을 한다"는 예시입니다.</p>
     `,
   },
   "modal-llm-prob": {
@@ -1084,7 +1084,7 @@ $ node --check script.js</pre>
     kicker: "Live Demo",
     title: "Ensembl KRT14 데이터로 3D gene viewer 만들기",
     body: `
-      <p>가능합니다. 데모에서는 Ensembl REST API에서 실제 <strong>human KRT14</strong> gene annotation을 가져와, exon/intron 구조를 교육용 3D schematic으로 시각화하는 방식이 좋습니다.</p>
+      <p>Ensembl REST API에서 실제 <strong>human KRT14</strong> gene annotation을 가져와, exon/intron 구조를 교육용 3D schematic으로 시각화할 수 있습니다.</p>
       <pre>Ensembl REST API에서 human KRT14 gene annotation을 받아와서,
 exon/intron 구조를 3D gene viewer HTML로 만들어줘.
 대표 transcript, exon 위치, transcription 방향, gene 좌표를 라벨로 표시하고
@@ -1097,7 +1097,7 @@ exon/intron 구조를 3D gene viewer HTML로 만들어줘.
         <li><strong>Artifact:</strong> 회전/확대 가능한 <code>krt14_gene_viewer.html</code>과 원본 API JSON이 남습니다.</li>
         <li><strong>Review:</strong> 실제 좌표와 exon 개수, strand 방향, 라벨 위치, 과장된 생물학적 표현 여부를 사람이 검토합니다.</li>
       </ol>
-      <p>데모용 endpoint 예시는 <code>https://rest.ensembl.org/lookup/symbol/homo_sapiens/KRT14?expand=1</code>입니다. API가 불안정할 수 있으므로, 라이브 중에는 먼저 JSON을 파일로 저장한 뒤 그 파일을 기준으로 viewer를 만들게 하면 안정적입니다.</p>
+      <p>Endpoint 예시는 <code>https://rest.ensembl.org/lookup/symbol/homo_sapiens/KRT14?expand=1</code>입니다. API가 불안정할 수 있으므로, 먼저 JSON을 파일로 저장한 뒤 그 파일을 기준으로 viewer를 만들면 안정적입니다.</p>
     `,
   },
   "modal-practice-goal": {
@@ -1141,10 +1141,10 @@ keratinocyte SPF vs GF RNA-seq 결과를 실습 자료로 다루려고 해.
       <ul>
         <li><strong>핵심:</strong> URL을 주고 설치를 요청하면 Codex가 저장소 구조를 보고 설치 절차를 진행할 수 있습니다.</li>
         <li><strong>핵심:</strong> bulk-rnaseq는 분석 workflow 기준, scientific-visualization은 figure 품질 기준을 담당합니다.</li>
-        <li><strong>실습 포인트:</strong> 계획을 먼저 보고, 방향이 맞으면 다음 단계로 진행합니다.</li>
+        <li><strong>진행 방식:</strong> 계획을 먼저 보고, 방향이 맞으면 다음 단계로 진행합니다.</li>
         <li><strong>좋은 표현:</strong> "두 Skill 내용을 읽고", "역할을 나눠줘", "Artifact와 검토 지점을 제안해줘"</li>
       </ul>
-      <p>이 단계는 Skill이 단순한 이름표가 아니라, Agent의 작업 방식을 바꾸는 지침이라는 것을 보여줍니다.</p>
+      <p>Skill은 단순한 이름표가 아니라, Agent의 작업 방식을 바꾸는 지침입니다.</p>
     `,
   },
   "modal-session-visualization": {
@@ -1206,7 +1206,7 @@ bulk-rnaseq 기준으로 정리한 분석 report와 연결되도록 하고,
         <li><strong>figure_review.md:</strong> 그림을 발표에 쓸 때 확인할 메시지와 주의점을 남깁니다.</li>
         <li><strong>review_checklist.md:</strong> HITL 검토를 실제 파일로 만듭니다.</li>
       </ul>
-      <p>이 단계에서는 화면에 파일이 생기는 것을 보여주는 것이 좋습니다. "AI 답변"이 "검토 가능한 산출물"로 바뀌는 순간이기 때문입니다.</p>
+      <p>이렇게 하면 "AI 답변"이 아니라, 열어보고 수정할 수 있는 파일 단위 산출물이 남습니다.</p>
     `,
   },
   "modal-session-scope": {
@@ -1226,7 +1226,7 @@ bulk-rnaseq 기준으로 정리한 분석 report와 연결되도록 하고,
         <li><strong>좋은 피드백:</strong> "이 marker 선정 기준을 figure note에 명확히 적어줘."</li>
         <li><strong>좋은 피드백:</strong> "이 결과는 내 실험 맥락과 다르니 별도 caveat로 분리해줘."</li>
       </ul>
-      <p>이 장면까지 보여주면 Skill 사용이 "한 번 요청해서 끝"이 아니라, 사람 검토가 들어가는 반복 workflow라는 점이 자연스럽게 전달됩니다.</p>
+      <p>Skill 사용은 한 번 요청하고 끝내는 방식이 아니라, 사람 검토가 들어가는 반복 workflow로 다루는 것이 안정적입니다.</p>
     `,
   },
   "modal-dataset": {
@@ -1254,22 +1254,22 @@ bulk-rnaseq 기준으로 정리한 분석 report와 연결되도록 하고,
   "modal-qc": {
     kicker: "Keratinocyte",
     title: "QC 포인트",
-    body: "<p>원시 FASTQ는 전체 22GB 규모라 강의 중 full QC를 돌리기보다 기존 QC 리포트와 샘플링 결과를 확인합니다. Agent가 무거운 작업을 무작정 실행하지 않도록 범위를 제한하는 것이 중요합니다.</p>",
+    body: "<p>원시 FASTQ는 전체 22GB 규모라 실시간 full QC보다 기존 QC 리포트와 샘플링 결과를 먼저 확인합니다. Agent가 무거운 작업을 무작정 실행하지 않도록 범위를 제한하는 것이 중요합니다.</p>",
   },
   "modal-volcano": {
     kicker: "Figure",
     title: "Volcano plot",
-    body: `<p>전체 DEG 방향성과 유의성을 빠르게 보여주는 그림입니다. 강의에서는 "그럴듯한 그림"이 아니라, 축과 기준, filtering을 먼저 확인해야 한다는 예시로 씁니다.</p><img src="assets/keratinocyte/volcano-spf-gf.png" alt="Volcano plot">`,
+    body: `<p>전체 DEG 방향성과 유의성을 빠르게 확인하는 그림입니다. 축, threshold, p-value 기준, filtering 조건을 함께 확인해야 합니다.</p><img src="assets/keratinocyte/volcano-spf-gf.png" alt="Volcano plot">`,
   },
   "modal-targeted-panel": {
     kicker: "Figure",
     title: "Targeted biology panel",
-    body: `<p>Barrier, wound/ECM/migration, innate antimicrobial, growth factor, hair/skin appendage 관련 유전자 패널을 방향성으로 보여줍니다. 도메인 검토가 가장 많이 들어갈 그림입니다.</p><img src="assets/keratinocyte/targeted-panel.png" alt="Targeted panel">`,
+    body: `<p>Barrier, wound/ECM/migration, innate antimicrobial, growth factor, hair/skin appendage 관련 유전자 패널의 방향성을 확인하는 그림입니다. 도메인 검토가 가장 많이 필요한 산출물입니다.</p><img src="assets/keratinocyte/targeted-panel.png" alt="Targeted panel">`,
   },
   "modal-heatmap": {
     kicker: "Figure",
     title: "Selected marker heatmap",
-    body: `<p>선택된 marker의 패턴을 직관적으로 보여줍니다. marker 선정 기준을 반드시 함께 설명해야 합니다.</p><img src="assets/keratinocyte/marker-heatmap.png" alt="Marker heatmap">`,
+    body: `<p>선택된 marker의 sample별 패턴을 확인하는 그림입니다. marker 선정 기준을 반드시 함께 설명해야 합니다.</p><img src="assets/keratinocyte/marker-heatmap.png" alt="Marker heatmap">`,
   },
   "modal-agents-md-what": {
     kicker: "AGENTS.md",
@@ -1330,7 +1330,7 @@ bulk-rnaseq 기준으로 정리한 분석 report와 연결되도록 하고,
     kicker: "K-Dense Skill Example",
     title: "bulk-rnaseq/SKILL.md 실제 예시",
     body: `
-      <p>아래는 K-Dense의 <strong>bulk-rnaseq</strong> skill 파일 구조를 강의용으로 발췌한 예시입니다. Skill은 자연어 설명이 아니라, Agent가 따라야 할 작업 절차와 검증 기준을 담은 파일입니다.</p>
+      <p>아래는 K-Dense의 <strong>bulk-rnaseq</strong> skill 파일 구조를 발췌한 예시입니다. Skill은 자연어 설명이 아니라, Agent가 따라야 할 작업 절차와 검증 기준을 담은 파일입니다.</p>
       <p><strong>1. Frontmatter: 언제 이 Skill을 쓸지 정의</strong></p>
       <pre>---
 name: bulk-rnaseq
@@ -1380,13 +1380,13 @@ FastQC/trim → align/quant (STAR/Salmon)
 3. Differential expression:
    counts.csv + metadata.csv → DE table
    with FDR control.</pre>
-      <p>강의 실습에서는 이 전체 pipeline을 새로 돌리기보다, 기존 keratinocyte 결과를 Skill의 관점으로 읽고 <strong>report, figure note, 검토 checklist</strong>를 만드는 방식으로 사용합니다.</p>
+      <p>이 전체 pipeline을 새로 돌리기보다, 기존 keratinocyte 결과를 Skill의 관점으로 읽고 <strong>report, figure note, 검토 checklist</strong>를 만드는 방식으로 사용할 수 있습니다.</p>
     `,
   },
   "modal-skill-install": {
     kicker: "Skills",
     title: "설치",
-    body: "<p>Scientific Agent Skills는 GitHub 저장소를 통해 설치하고, Codex가 작업 유형에 맞는 skill을 읽도록 구성합니다. 실습에서는 설치 자체보다, Skill을 불러 실제 산출물 작성 기준을 적용하는 장면에 집중합니다.</p>",
+    body: "<p>Scientific Agent Skills는 GitHub 저장소를 통해 설치하고, Codex가 작업 유형에 맞는 skill을 읽도록 구성합니다. 설치 후에는 Skill을 불러 실제 산출물 작성 기준에 적용할 수 있습니다.</p>",
   },
   "modal-skill-use": {
     kicker: "Skills",
@@ -1436,12 +1436,12 @@ FastQC/trim → align/quant (STAR/Salmon)
   "modal-google": {
     kicker: "Frontier",
     title: "Google",
-    body: "<p>NotebookLM은 자료 기반 정리, Gemini Deep Research는 웹 기반 리서치, Gemini for Science는 과학 연구 특화 AI가 어디로 가는지 보여주는 사례로 소개합니다.</p>",
+    body: "<p>NotebookLM은 자료 기반 정리, Gemini Deep Research는 웹 기반 리서치, Gemini for Science는 과학 연구 특화 AI의 방향성을 보여주는 사례입니다.</p>",
   },
   "modal-anthropic": {
     kicker: "Frontier",
     title: "Anthropic",
-    body: "<p>Claude는 긴 논문/원고 읽기, 논리 검토, 비판적 피드백, 학술 글쓰기 보조에 강점이 있습니다. Claude Code는 agentic coding 사용 사례를 보여줍니다.</p>",
+    body: "<p>Claude는 긴 논문/원고 읽기, 논리 검토, 비판적 피드백, 학술 글쓰기 보조에 강점이 있습니다. Claude Code는 agentic coding workflow와 연결됩니다.</p>",
   },
   "modal-elicit": {
     kicker: "Mention",
@@ -1557,7 +1557,7 @@ FastQC/trim → align/quant (STAR/Salmon)
         </figure>
       </div>
       <ul>
-        <li><strong>강의 메시지:</strong> AI를 쓰지 말자는 이야기가 아니라, AI가 만든 결과를 읽고 질문하고 검토하는 방식으로 써야 합니다.</li>
+        <li><strong>핵심 메시지:</strong> AI를 쓰지 말자는 이야기가 아니라, AI가 만든 결과를 읽고 질문하고 검토하는 방식으로 써야 합니다.</li>
         <li><strong>연구자에게 중요한 점:</strong> 분석, 문헌 정리, 발표자료 생성은 빨라질 수 있지만, 해석과 검증 능력은 사람이 유지해야 합니다.</li>
       </ul>
       <p class="modal-note">Source: <a href="https://arxiv.org/abs/2601.20245" target="_blank" rel="noreferrer">arXiv:2601.20245</a></p>

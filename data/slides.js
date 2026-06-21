@@ -203,7 +203,7 @@ window.SLIDES = [
             <p class="kicker">Live Demo</p>
             <h2>논문 발표 준비에서 Agent는<br>어디까지 도와줄 수 있을까?</h2>
             <p class="lead">
-              PDF 하나를 넣고, 논문 요약이 아니라<br>연구실 발표 workflow 전체를 구조화하는 과정을 보여줍니다.
+              PDF 하나를 넣고, 논문 요약이 아니라<br>연구실 발표 workflow 전체를 구조화합니다.
             </p>
             <button class="text-button" data-modal="modal-paper-demo-source">사용할 논문</button>
           </div>
@@ -504,7 +504,7 @@ window.SLIDES = [
 	              <span>$ codex</span>
 	              <p>Ensembl REST API에서 human KRT14 gene annotation을 받아와서, exon/intron 구조를 3D gene viewer HTML로 만들어줘. 대표 transcript, exon 위치, transcription 방향, gene 좌표를 라벨로 표시하고 브라우저에서 검증해줘. 먼저 계획부터 보여줘.</p>
 	            </div>
-	            <button class="text-button" data-modal="modal-agent-live-demo">라이브 데모 포인트</button>
+	            <button class="text-button" data-modal="modal-agent-live-demo">라이브 데모 내용</button>
 	          </div>
 	        </div>
 	    `,
