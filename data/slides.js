@@ -823,7 +823,7 @@ FastQC/trim → align/quant → counts
           <p class="kicker">Education</p>
           <h2>앞으로 더 중요해지는 세 가지 힘</h2>
           <div class="education-visual-wrap">
-            <img src="assets/three-human-powers.svg" alt="AI 시대에 더 중요해지는 읽기, 질문, 판단의 힘을 표현한 이미지" />
+            <img src="assets/three-human-powers.png" alt="AI 시대에 더 중요해지는 읽기, 질문, 판단의 힘을 표현한 인포그래픽" />
           </div>
           <div class="education-grid education-actions">
             <button data-modal="modal-read"><strong>잘 읽는 힘</strong><span>근거를 읽고 이해하기</span></button>
