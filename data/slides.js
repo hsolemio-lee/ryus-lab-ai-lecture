@@ -746,7 +746,7 @@ FastQC/trim → align/quant → counts
     html: `
 <div class="slide-inner">
           <p class="kicker">Frontier Tools</p>
-          <h2>프론티어 도구는<br>흐름만 잡으면 됩니다</h2>
+          <h2>프론티어 도구만으로도<br>충분합니다</h2>
           <div class="frontier-grid">
             <button data-modal="modal-openai"><strong>OpenAI</strong><span>ChatGPT, Deep Research, Codex</span></button>
             <button data-modal="modal-google"><strong>Google</strong><span>NotebookLM, Gemini Deep Research, Gemini for Science</span></button>
