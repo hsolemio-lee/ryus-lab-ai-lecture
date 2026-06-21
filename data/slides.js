@@ -315,7 +315,7 @@ window.SLIDES = [
     html: `
 <div class="slide-inner">
           <p class="kicker">Actual Artifacts</p>
-          <h2>실제 결과물은<br>이미지와 패키지로 남았습니다</h2>
+          <h2>실제 결과물</h2>
           <div class="artifact-gallery">
             <button data-modal="modal-jimin-artifact-overview">
               <img src="assets/jimin-session/crc-heatmap-overview.png" alt="CRC overview heatmap" />
