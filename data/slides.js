@@ -10,9 +10,16 @@ window.SLIDES = [
 		            <p class="lead">
 		              AI를 답안지가 아니라,<br>맥락을 주고 검토하며 함께 일하는<br>연구 보조 에이전트로 다루는 법.
 	            </p>
+	            <a class="note-download-cta" href="assets/downloads/ryus-lab-ai-lecture-notes.pdf" download aria-label="강의노트 PDF 다운로드">
+	              <span class="note-download-icon" aria-hidden="true">↓</span>
+	              <span class="note-download-copy">
+	                <strong>강의노트 PDF 다운로드</strong>
+	                <small>실습 준비사항과 상세 설명 포함</small>
+	              </span>
+	              <span class="note-download-badge" aria-hidden="true">PDF</span>
+	            </a>
 	            <div class="hero-actions">
 	              <button class="pill-button" data-modal="modal-overview">강의 흐름</button>
-	              <a class="pill-button" href="assets/downloads/ryus-lab-ai-lecture-notes.pdf" download>강의 노트 PDF</a>
 	            </div>
 	          </div>
 	        </div>
