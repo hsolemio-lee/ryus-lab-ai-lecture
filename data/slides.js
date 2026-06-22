@@ -56,30 +56,30 @@ window.SLIDES = [
     html: `
 <div class="slide-inner">
           <p class="kicker">Expected Outcomes</p>
-            <h2>AI가 Research Workflow에<br>실제로 들어오는 순간</h2>
+            <h2>오늘 끝나면 AI를<br>어디에 써야 할지 보입니다</h2>
           <p class="lead narrow">
-            오늘의 목표는 신기한 답변을 보는 것이 아니라,<br>Paper Review, Data Analysis, Report 생성까지 이어지는<br>실제 workflow를 경험하는 것입니다.
+            AI에게 질문만 던지는 것이 아니라,<br>논문 PDF와 데이터 폴더를 넣고<br>검토 가능한 산출물을 만드는 흐름을 익힙니다.
           </p>
           <div class="outcome-flow" aria-label="이번 강의의 기대효과">
             <div class="outcome-card" style="--i: 0" data-step="01">
               <span class="outcome-index">01</span>
-              <strong>Paper PDF가 Presentation Draft가 됩니다</strong>
-              <p>논문을 넣고 Research Question, Figure 해석, Journal Club 목차, 발표 Script, PPT 구조까지 이어갑니다.</p>
+              <strong>논문 PDF에서 발표 흐름을 뽑아냅니다</strong>
+              <p>Paper Summary에서 멈추지 않고 Research Question, Figure 흐름, Journal Club 목차, 발표 Script까지 이어갑니다.</p>
             </div>
             <div class="outcome-card" style="--i: 1" data-step="02">
               <span class="outcome-index">02</span>
-              <strong>FASTQ 등 Raw Sequencing Data도 Analysis Workflow가 됩니다</strong>
-              <p>Raw Sequencing Data부터 QC, Trimming, Alignment, Count Matrix, DEG, Pathway, Figure까지 연결해 검토 가능한 Report로 만듭니다.</p>
+              <strong>데이터 폴더가 Analysis Note가 됩니다</strong>
+              <p>오늘은 count, DEG, QC 결과를 읽고, FASTQ 같은 Raw Data까지 확장될 수 있는 Analysis Workflow의 감각을 잡습니다.</p>
             </div>
             <div class="outcome-card" style="--i: 2" data-step="03">
               <span class="outcome-index">03</span>
-              <strong>AI가 Chat이 아니라 Artifact를 만듭니다</strong>
-              <p>Python 실행, Plot 생성, HTML Report, PPT Draft처럼 눈으로 확인하고 수정할 수 있는 산출물을 만듭니다.</p>
+              <strong>AI 답변이 파일 산출물로 남습니다</strong>
+              <p>대화창의 문장만 보는 것이 아니라 Python code, Plot, Markdown Report, PPT Draft처럼 다시 열어볼 수 있는 Artifact를 만듭니다.</p>
             </div>
             <div class="outcome-card" style="--i: 3" data-step="04">
               <span class="outcome-index">04</span>
-              <strong>Researcher는 Operator가 아니라 Reviewer가 됩니다</strong>
-              <p>Experimental Context, Interpretation Limit, Figure Message는 사람이 잡고 AI는 반복 작업과 Draft 생성을 맡습니다.</p>
+              <strong>연구자는 버튼 누르는 사람이 아니라 Reviewer가 됩니다</strong>
+              <p>Experimental Context, Interpretation Limit, Figure Message는 사람이 판단하고, AI는 반복 작업과 Draft 생성을 맡습니다.</p>
             </div>
           </div>
         </div>
