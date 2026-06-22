@@ -632,7 +632,7 @@ FastQC/trim → align/quant → counts
 	            </p>
 	            <div class="practice-actions">
 	              <button class="text-button" data-modal="modal-practice-goal">실습 목표</button>
-	              <a class="download-chip" href="https://hsolemio-lee.github.io/ryus-lab-ai-lecture/assets/downloads/keratinocyte_practice_input_no_fastq.zip" download="keratinocyte_practice_input_no_fastq.zip" type="application/zip">실습 ZIP 다운로드</a>
+	              <a class="download-chip" href="https://raw.githubusercontent.com/hsolemio-lee/ryus-lab-ai-lecture/main/assets/downloads/keratinocyte_practice_input_no_fastq.zip" download="keratinocyte_practice_input_no_fastq.zip" type="application/zip">실습 ZIP 다운로드</a>
 	            </div>
 	          </div>
 	          <div class="terminal-card" aria-label="실습 프롬프트 예시">
