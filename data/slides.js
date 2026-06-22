@@ -10,7 +10,7 @@ window.SLIDES = [
 		            <p class="lead">
 		              AI를 답안지가 아니라,<br>맥락을 주고 검토하며 함께 일하는<br>연구 보조 에이전트로 다루는 법.
 	            </p>
-	            <a class="note-download-cta" href="assets/downloads/ryus-lab-ai-lecture-notes.pdf" download="ryus-lab-ai-lecture-notes.pdf" type="application/pdf" aria-label="강의노트 PDF 다운로드">
+	            <a class="note-download-cta" href="https://hsolemio-lee.github.io/ryus-lab-ai-lecture/assets/downloads/ryus-lab-ai-lecture-notes.pdf" download="ryus-lab-ai-lecture-notes.pdf" type="application/pdf" aria-label="강의노트 PDF 다운로드">
 	              <span class="note-download-icon" aria-hidden="true">↓</span>
 	              <span class="note-download-copy">
 	                <strong>강의노트 PDF 다운로드</strong>
@@ -632,7 +632,7 @@ FastQC/trim → align/quant → counts
 	            </p>
 	            <div class="practice-actions">
 	              <button class="text-button" data-modal="modal-practice-goal">실습 목표</button>
-	              <a class="download-chip" href="assets/downloads/keratinocyte_analysis_results_no_fastq.zip" download>실습 ZIP 다운로드</a>
+	              <a class="download-chip" href="https://hsolemio-lee.github.io/ryus-lab-ai-lecture/assets/downloads/keratinocyte_analysis_results_no_fastq.zip" download="keratinocyte_analysis_results_no_fastq.zip" type="application/zip">실습 ZIP 다운로드</a>
 	            </div>
 	          </div>
 	          <div class="terminal-card" aria-label="실습 프롬프트 예시">
