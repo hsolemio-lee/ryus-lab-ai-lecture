@@ -213,7 +213,10 @@ window.SLIDES = [
             <p class="lead">
               PDF 하나를 넣고, 논문 요약이 아니라<br>연구실 발표 workflow 전체를 구조화합니다.
             </p>
-            <button class="text-button" data-modal="modal-paper-demo-source">사용할 논문</button>
+            <div class="practice-actions">
+              <button class="text-button" data-modal="modal-paper-demo-source">사용할 논문</button>
+              <a class="download-chip" href="https://www.cell.com/cell-host-microbe/pdf/S1931-3128%2823%2900501-2.pdf" target="_blank" rel="noopener" type="application/pdf">논문 PDF 다운로드</a>
+            </div>
           </div>
           <div class="demo-flow">
             <button data-modal="modal-paper-demo-0"><strong>0</strong><span>Plan mode로 시작</span></button>

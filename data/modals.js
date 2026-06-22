@@ -217,6 +217,7 @@ window.MODALS = {
     title: "사용할 논문",
     body: `
       <p>데모 논문은 <strong>Skin microbe-dependent TSLP-ILC2 priming axis in early life is co-opted in allergic inflammation</strong>입니다. skin microbiota, keratinocyte-derived TSLP, ILC2 priming, AD-like inflammation이 Figure 흐름으로 선명하게 이어집니다.</p>
+      <p><a href="https://www.cell.com/cell-host-microbe/pdf/S1931-3128%2823%2900501-2.pdf" target="_blank" rel="noopener">공식 논문 PDF 열기</a></p>
       <ul>
         <li>목표: 논문 요약을 맡기는 것이 아니라, 발표 준비 절차를 Agent와 함께 구조화합니다.</li>
         <li>절차 적합성: Graphical abstract, Highlights, Summary, Figure 1-7의 실험 흐름이 명확합니다.</li>
