@@ -4,12 +4,12 @@ window.MODALS = {
     title: "강의 흐름",
     body: `
       <ol>
-        <li>소개와 AI 사용 경험 확인</li>
-        <li>ChatGPT 이후 Agentic AI까지의 변화</li>
-        <li>Prompt, Context, Agent, Skill, Hook, Harness 개념</li>
-        <li>Hallucination과 Human-in-the-loop 검증</li>
-        <li>Codex로 keratinocyte RNA-seq 분석 workflow 구조화</li>
-        <li>프론티어 연구 도구와 마지막 교육 메시지</li>
+        <li><strong>AI 활용의 관점 전환:</strong> 답을 받는 chat에서, 맥락을 주고 산출물을 검토하는 agentic workflow로 이동합니다.</li>
+        <li><strong>연구자가 알아야 할 기본 개념:</strong> LLM, Context, Agent, Tool Use, Artifact, HITL, Skill, AGENTS.md를 강의 내내 반복해서 씁니다.</li>
+        <li><strong>논문과 데이터로 보는 실제 workflow:</strong> paper presentation 준비와 RNA-seq 결과 검토를 예시로, AI가 만들 수 있는 산출물을 확인합니다.</li>
+        <li><strong>Hands-on:</strong> Codex와 Scientific Agent Skills를 사용해 report, figure note, review checklist를 만들어봅니다.</li>
+        <li><strong>프론티어 도구 지도:</strong> Deep Research, NotebookLM, Gemini Deep Research 같은 도구를 언제 쓰면 좋은지 정리합니다.</li>
+        <li><strong>마지막 메시지:</strong> 앞으로 더 중요해지는 것은 좋은 질문, 충분한 context, 스스로 검토하는 힘입니다.</li>
       </ol>
     `,
   },
@@ -19,7 +19,9 @@ window.MODALS = {
     body: `
       <ul>
         <li><a href="https://openai.com/index/chatgpt/" target="_blank" rel="noreferrer">OpenAI - Introducing ChatGPT</a></li>
-        <li><a href="https://openai.com/index/introducing-deep-research/" target="_blank" rel="noreferrer">OpenAI - Introducing deep research</a></li>
+        <li><a href="https://help.openai.com/en/articles/10500283-deep-research-in-chatgpt" target="_blank" rel="noreferrer">OpenAI Help - Deep research in ChatGPT</a></li>
+        <li><a href="https://notebooklm.google/" target="_blank" rel="noreferrer">Google - NotebookLM</a></li>
+        <li><a href="https://gemini.google/overview/deep-research/" target="_blank" rel="noreferrer">Google - Gemini Deep Research</a></li>
         <li><a href="https://blog.google/innovation-and-ai/technology/research/gemini-for-science-io-2026/" target="_blank" rel="noreferrer">Google - Gemini for Science</a></li>
         <li><a href="https://www.anthropic.com/research/claude-code-expertise" target="_blank" rel="noreferrer">Anthropic - Agentic coding and expertise</a></li>
         <li><a href="https://arxiv.org/abs/2601.20245" target="_blank" rel="noreferrer">arXiv:2601.20245 - How AI Impacts Skill Formation</a></li>
@@ -1460,12 +1462,28 @@ FastQC/trim → align/quant (STAR/Salmon)
   "modal-openai": {
     kicker: "Frontier",
     title: "OpenAI",
-    body: "<p>ChatGPT와 Deep Research는 연구 질문 구체화, 문헌 조사, 보고서 작성, 데이터 분석, 코딩 보조에 유용합니다. Codex는 코드와 파일을 직접 다루는 agentic workflow에 적합합니다.</p>",
+    body: `
+      <p>OpenAI 계열 도구는 연구 workflow에서 <strong>질문 정리 → 조사 → 산출물 작성 → 파일 기반 작업</strong>까지 이어서 쓰기 좋습니다.</p>
+      <ul>
+        <li><strong>ChatGPT:</strong> 연구 질문을 좁히고, 초록/서론/토론 문장을 다듬고, 분석 결과를 설명 가능한 문장으로 바꾸는 데 유용합니다.</li>
+        <li><strong>Deep Research:</strong> 사용자가 목표와 source 범위를 정하면, research plan을 만들고 웹, 업로드 파일, 연결된 앱 같은 source를 탐색해 citation/source link가 붙은 structured report를 생성합니다. 긴 배경 조사, 연구 동향 정리, 발표 전 literature landscape 파악에 적합합니다.</li>
+        <li><strong>Codex:</strong> 실제 파일과 폴더를 읽고, 코드를 실행하고, report, figure, PPT draft 같은 artifact를 만드는 agentic workflow에 적합합니다.</li>
+      </ul>
+      <p class="modal-note"><a href="https://help.openai.com/en/articles/10500283-deep-research-in-chatgpt" target="_blank" rel="noreferrer">OpenAI Help: Deep research in ChatGPT</a></p>
+    `,
   },
   "modal-google": {
     kicker: "Frontier",
     title: "Google",
-    body: "<p>NotebookLM은 자료 기반 정리, Gemini Deep Research는 웹 기반 리서치, Gemini for Science는 과학 연구 특화 AI의 방향성을 보여주는 사례입니다.</p>",
+    body: `
+      <p>Google 계열 도구는 <strong>내가 넣은 자료 기반 정리</strong>와 <strong>웹/Workspace 기반 조사</strong>를 구분해서 이해하면 쉽습니다.</p>
+      <ul>
+        <li><strong>NotebookLM:</strong> 논문 PDF, 노트, 문서처럼 사용자가 넣은 source를 중심으로 질문하고 요약하는 research notebook입니다. 논문 묶음의 핵심 주장, figure별 의미, lab meeting용 Q&A, Audio Overview 같은 학습 보조 산출물에 적합합니다.</li>
+        <li><strong>Gemini Deep Research:</strong> 복잡한 조사 과제를 하위 질문으로 나누고, 웹과 선택한 Workspace source를 탐색해 맞춤형 research report를 만드는 도구입니다. 넓은 주제의 background 조사, 경쟁 기술/분야 동향, 발표 도입부의 큰 그림 정리에 적합합니다.</li>
+        <li><strong>Gemini for Science:</strong> 과학 연구 특화 AI가 어떤 방향으로 발전하는지 보여주는 흐름입니다. 당장 모든 연구실 workflow를 대체한다기보다, 과학 문제를 위한 frontier model의 방향성을 보는 사례로 소개합니다.</li>
+      </ul>
+      <p class="modal-note"><a href="https://notebooklm.google/" target="_blank" rel="noreferrer">Google NotebookLM</a> · <a href="https://gemini.google/overview/deep-research/" target="_blank" rel="noreferrer">Gemini Deep Research</a></p>
+    `,
   },
   "modal-anthropic": {
     kicker: "Frontier",
