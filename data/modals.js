@@ -1420,6 +1420,20 @@ FastQC/trim → align/quant (STAR/Salmon)
     title: "Skills",
     body: "<p>Skill은 반복 작업용 매뉴얼입니다. bulk RNA-seq, figure review, literature review처럼 작업 유형이 분명할 때 Skill을 불러오면 산출물 형식과 검증 절차가 안정됩니다.</p>",
   },
+  "modal-codex-reasoning": {
+    kicker: "Codex Tip",
+    title: "Reasoning level",
+    body: `
+      <p><strong>Low, Medium, High, XHigh</strong>는 모델의 등급이라기보다 <strong>reasoning effort</strong>, 즉 모델이 한 작업에 얼마나 깊게 생각할지 정하는 설정입니다.</p>
+      <ul>
+        <li><strong>Low:</strong> 범위가 명확한 짧은 작업, 문장 다듬기, 파일명 정리, 단순 확인에 적합합니다.</li>
+        <li><strong>Medium:</strong> 기본값처럼 쓰기 좋은 균형점입니다. 논문 요약, figure note, 일반적인 코드/문서 수정에 적합합니다.</li>
+        <li><strong>High:</strong> 여러 파일을 읽고 비교하거나, 분석 기준을 점검하거나, 오류 원인을 추적해야 할 때 적합합니다.</li>
+        <li><strong>XHigh / Extra High:</strong> 긴 agentic workflow, 복잡한 디버깅, 여러 단계의 연구 산출물을 끝까지 만들 때 사용합니다.</li>
+      </ul>
+      <p>높게 설정하면 더 깊게 검토할 가능성이 커지지만, 응답 시간이 길어지고 token 사용량도 늘어날 수 있습니다. 실습에서는 보통 <strong>Medium</strong>으로 시작하고, 결과가 얕거나 복잡한 검토가 필요할 때 <strong>High</strong>로 올리는 방식이 좋습니다.</p>
+    `,
+  },
   "modal-codex-settings": {
     kicker: "Codex Tip",
     title: "Settings",

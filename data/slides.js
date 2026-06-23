@@ -707,6 +707,7 @@ FastQC/trim → align/quant → counts
 	            <button class="codex-tip-card" data-modal="modal-codex-plan"><strong>Plan mode</strong><span>실행 전에 작업 순서와 위험요소를 확인합니다.</span></button>
 	            <button class="codex-tip-card" data-modal="modal-codex-files"><strong>Files & paths</strong><span>PDF, 데이터 폴더, figure를 직접 context로 줍니다.</span></button>
 	            <button class="codex-tip-card" data-modal="modal-codex-skills"><strong>Skills</strong><span>반복 작업을 재사용 가능한 매뉴얼로 호출합니다.</span></button>
+	            <button class="codex-tip-card" data-modal="modal-codex-reasoning"><strong>Reasoning level</strong><span>Low, Medium, High는 생각의 깊이를 조절합니다.</span></button>
 	            <button class="codex-tip-card" data-modal="modal-codex-settings"><strong>Settings</strong><span>개인맞춤설정, privacy, usage를 먼저 확인합니다.</span></button>
 	            <button class="codex-tip-card" data-modal="modal-codex-verify"><strong>Verify</strong><span>테스트와 산출물 확인을 작업 끝에 붙입니다.</span></button>
 	            <button class="codex-tip-card" data-modal="modal-codex-browser"><strong>Browser</strong><span>HTML report와 GitHub Pages를 눈으로 검토합니다.</span></button>
