@@ -1287,11 +1287,12 @@ bulk-rnaseq 기준으로 정리한 분석 report와 연결되도록 하고,
     title: "무엇을 쓰나",
     body: `
       <pre># AGENTS.md 예시
-- 데이터 원본은 수정하지 않는다.
-- 무거운 FASTQ 재분석은 사용자 확인 후 실행한다.
-- 결과물은 reports/ 아래 Markdown으로 저장한다.
-- 그림을 만들면 축, 기준, filtering 조건을 함께 기록한다.
-- 결론은 "관찰된 연관"과 "추가 검증 필요"를 구분한다.</pre>
+- 원본 data/ 폴더는 수정하지 않는다.
+- 분석은 work/ 또는 outputs/ 아래에서만 실행한다.
+- FASTQ, BAM, 대용량 matrix 재처리는 실행 전 사용자 확인을 받는다.
+- sample metadata, condition, batch, replicate 정보를 먼저 요약한다.
+- figure를 만들면 axis, threshold, filtering, gene selection 기준을 함께 기록한다.
+- 결론은 observed result, interpretation, validation needed로 나눠 쓴다.</pre>
     `,
   },
   "modal-agents-md-vs-skill": {
@@ -1497,7 +1498,7 @@ FastQC/trim → align/quant (STAR/Salmon)
         <li><strong>연구실 활용:</strong> 발표 도입부의 일반론이나 배경 문장을 넣기 전, 근거 문헌이 실제로 있는지 확인합니다.</li>
         <li><strong>주의:</strong> 연구 설계, sample size, endpoint 차이를 뭉뚱그릴 수 있으므로 primary paper를 반드시 읽어야 합니다.</li>
       </ul>
-      <p class="modal-note"><a href="https://consensus.app/" target="_blank" rel="noreferrer">consensus.app</a></p>
+      <p class="modal-note"><a href="https://help.consensus.app/en/articles/9922673-how-consensus-works" target="_blank" rel="noreferrer">Consensus help: How Consensus works</a></p>
     `,
   },
   "modal-scispace": {
@@ -1525,7 +1526,7 @@ FastQC/trim → align/quant (STAR/Salmon)
         <li><strong>연구실 활용:</strong> 새로운 AI 도구, 데이터베이스, 분석 패키지, 공식 문서 링크를 빠르게 찾습니다.</li>
         <li><strong>주의:</strong> citation이 있다고 항상 충분한 근거라는 뜻은 아닙니다. 최종 판단은 원문 링크를 열어 확인해야 합니다.</li>
       </ul>
-      <p class="modal-note"><a href="https://www.perplexity.ai/help-center/en/articles/10352903-what-is-pro-search.html" target="_blank" rel="noreferrer">Perplexity Help Center</a></p>
+      <p class="modal-note"><a href="https://www.perplexity.ai/help-center/en/articles/10352895-how-does-perplexity-work.html" target="_blank" rel="noreferrer">Perplexity Help Center: How it works</a></p>
     `,
   },
   "modal-alphafold": {
@@ -1539,7 +1540,7 @@ FastQC/trim → align/quant (STAR/Salmon)
         <li><strong>연구실 활용:</strong> 후보 단백질/변이/ligand interaction을 보기 위한 preliminary model로 사용합니다.</li>
         <li><strong>주의:</strong> 예측 구조는 실험 검증을 대체하지 않습니다. confidence score, binding site plausibility, known structure와 비교가 필요합니다.</li>
       </ul>
-      <p class="modal-note"><a href="https://alphafoldserver.com/about" target="_blank" rel="noreferrer">alphafoldserver.com/about</a></p>
+      <p class="modal-note"><a href="https://alphafoldserver.com/" target="_blank" rel="noreferrer">alphafoldserver.com</a></p>
     `,
   },
   "modal-skill-paper": {

@@ -395,7 +395,7 @@
     <h2>목차</h2>
     <ol>
       <li>강의 전 준비사항</li>
-      <li>오늘의 큰 그림</li>
+      <li>강의 목표</li>
       <li>기본 용어: LLM, Context, Agent, Skill</li>
       <li>ChatGPT에서 Agentic AI까지</li>
       <li>현재 Agent가 할 수 있는 일과 한계</li>
@@ -456,7 +456,7 @@
   </section>
 
   <section>
-    <h2>2. 오늘의 큰 그림</h2>
+    <h2>2. 강의 목표</h2>
     <p>
       생성형 AI를 처음 쓸 때는 보통 "질문을 잘하면 좋은 답이 온다"는 방식으로 생각합니다. 하지만 연구 workflow에서 AI를 제대로 쓰려면 관점이 조금 달라져야 합니다. 좋은 질문도 중요하지만, 더 중요한 것은 충분한 context, 검토 가능한 artifact, 사람의 판단이 들어가는 반복 구조입니다.
     </p>
@@ -472,6 +472,9 @@
       <div><strong>Artifact</strong><span>답변이 아니라 파일, 표, 그림, checklist로 남기기</span></div>
       <div><strong>Review</strong><span>최종 해석과 판단은 연구자가 책임지기</span></div>
     </div>
+    <p>
+      이 네 가지는 오늘 강의에서 다루는 실무적인 목표입니다. 예시는 논문 발표 준비와 RNA-seq 결과 검토를 중심으로 들지만, 같은 구조는 imaging data, proteomics, clinical table, survey, grant writing, lab meeting 준비처럼 더 많은 연구 업무로 확장할 수 있습니다.
+    </p>
   </section>
 
   <section>
@@ -771,47 +774,47 @@
   </section>
 
   <section>
-    <h2>8. HITL: 연구자 피드백 기반 작업 방식</h2>
+    <h2>8. 실제 연구자의 피드백 기반 작업 예시</h2>
     <p>
-      실제 연구 업무에서 Agent는 파일을 읽고, figure를 만들고, report를 구성하고, 발표자료 초안까지 이어갈 수 있습니다. 하지만 분석 단위, 비교 기준, 시각화 방식, 해석의 강도는 연구자의 검토가 들어가야 안정적입니다.
+      실제 연구 업무에서 Agent는 파일을 읽고, figure를 만들고, report를 구성하고, 발표자료 초안까지 이어갈 수 있습니다. 하지만 처음 나온 결과가 바로 정답이 되는 경우는 드뭅니다. 연구자가 실험 맥락을 설명하고, 비교 기준을 고치고, figure가 읽히는 방식을 조정하면서 결과물이 점점 쓸 수 있는 형태가 됩니다.
     </p>
 
-    <h3>HITL이 필요한 대표 지점</h3>
+    <h3>실제 피드백이 들어가는 순간</h3>
     <table>
       <thead>
-        <tr><th>지점</th><th>연구자가 확인할 것</th><th>Agent에게 맡길 수 있는 일</th></tr>
+        <tr><th>상황</th><th>연구자의 피드백 예시</th><th>Agent가 다시 해야 할 일</th></tr>
       </thead>
       <tbody>
         <tr>
-          <td>분석 단위</td>
-          <td>sample, replicate, condition, batch를 어떻게 묶을지 결정</td>
-          <td>metadata를 읽고 가능한 grouping 후보와 장단점 제시</td>
+          <td>분석 단위가 애매할 때</td>
+          <td>"sample 단위가 아니라 condition 평균으로 먼저 비교해줘. replicate는 분산 확인용으로 따로 보여줘."</td>
+          <td>metadata와 expression table을 다시 읽고, group 평균과 replicate 분산을 분리한 summary를 만듭니다.</td>
         </tr>
         <tr>
-          <td>비교 기준</td>
-          <td>어떤 contrast가 연구 질문에 맞는지 판단</td>
-          <td>비교군별 결과 table, summary, figure 후보 정리</td>
+          <td>비교 기준이 연구 질문과 다를 때</td>
+          <td>"이 비교는 내 실험 질문과 다르다. SPF vs GF contrast를 중심으로 다시 정리해줘."</td>
+          <td>contrast 이름, fold change 방향, p-value 기준을 확인하고 report의 기준을 통일합니다.</td>
         </tr>
         <tr>
-          <td>시각화</td>
-          <td>axis, scale, color, threshold, filtering 기준이 적절한지 확인</td>
-          <td>volcano, heatmap, PCA, enrichment plot 초안 생성과 figure note 작성</td>
+          <td>Figure가 보기 어렵거나 메시지가 약할 때</td>
+          <td>"Heatmap 색 대비가 너무 약하다. marker group을 나누고, figure note에 gene 선정 기준을 적어줘."</td>
+          <td>색상 범위, gene grouping, label, export 형식을 조정하고 figure_review.md에 기준을 남깁니다.</td>
         </tr>
         <tr>
-          <td>해석</td>
-          <td>관찰된 결과, 가능한 가설, 추가 검증 필요 항목을 구분</td>
-          <td>과한 claim 후보를 표시하고 보수적인 문장으로 수정 제안</td>
+          <td>해석이 과하게 쓰였을 때</td>
+          <td>"이 문장은 causal claim처럼 들린다. 지금 데이터로는 association 정도로 낮춰줘."</td>
+          <td>결론 문장을 관찰된 결과, 가능한 해석, 추가 검증 필요 항목으로 나눠 다시 씁니다.</td>
         </tr>
         <tr>
-          <td>전달</td>
-          <td>공동연구자나 청중에게 공유해도 되는 수준인지 최종 판단</td>
-          <td>report, checklist, PPT draft, README, 전달 메일 초안 작성</td>
+          <td>전달 가능한 패키지가 필요할 때</td>
+          <td>"공동연구자에게 보낼 수 있게 figure, summary, 확인 질문을 한 폴더에 정리해줘."</td>
+          <td>report, figures, checklist, README, 전달용 요약 문장을 하나의 package로 묶습니다.</td>
         </tr>
       </tbody>
     </table>
 
     <div class="callout">
-      핵심은 Agent가 모든 판단을 대신하는 것이 아닙니다. Agent는 반복 작업과 산출물 생성을 맡고, 연구자는 분석 단위, 비교 기준, 해석 가능성, 최종 전달본을 검토합니다.
+      이 방식이 HITL입니다. 사람은 중간중간 "무엇이 맞는 질문인지", "어떤 비교가 의미 있는지", "어디까지 말해도 되는지"를 알려주고, Agent는 그 피드백을 반영해 산출물을 다시 만듭니다.
     </div>
   </section>
 
@@ -950,27 +953,50 @@
     <p>
       AGENTS.md는 프로젝트별 기본 지침입니다. README가 사람을 위한 설명서라면, AGENTS.md는 Agent가 작업을 시작할 때 참고하는 운영 지침에 가깝습니다.
     </p>
-    <pre># AGENTS.md 예시
-- 데이터 원본은 수정하지 않는다.
-- 대용량 원본 데이터 재분석은 사용자 확인 후 실행한다.
-- 결과물은 reports/ 아래 Markdown으로 저장한다.
-- 그림을 만들면 축, 기준, filtering 조건을 함께 기록한다.
-- 결론은 "관찰된 연관"과 "추가 검증 필요"를 구분한다.</pre>
+    <pre># AGENTS.md 예시: biology data project
+- 원본 data/ 폴더는 수정하지 않는다.
+- 분석은 work/ 또는 outputs/ 아래에서만 실행한다.
+- FASTQ, BAM, 대용량 matrix 재처리는 실행 전 반드시 사용자 확인을 받는다.
+- sample metadata, condition, batch, replicate 정보를 먼저 요약한다.
+- figure를 만들면 axis, threshold, filtering, gene selection 기준을 함께 기록한다.
+- 결론은 observed result, interpretation, validation needed로 나눠 쓴다.</pre>
 
     <h3>Skill</h3>
     <p>
-      Skill은 특정 작업 유형에 대한 재사용 가능한 작업 매뉴얼입니다. 예를 들어 연구 데이터 검토에서는 입력 파일, 품질 확인, 통계 기준, figure 해석, 검증 checklist를 함께 확인하도록 만들 수 있습니다.
+      Skill은 특정 작업 유형에 대한 재사용 가능한 작업 매뉴얼입니다. 생물학 연구에서는 "RNA-seq 결과 검토", "DEG와 pathway 해석", "발표용 figure 만들기", "논문 figure review"처럼 반복되는 업무를 Skill로 묶어둘 수 있습니다.
     </p>
     <pre>---
-name: research-data-review
-description: Review processed research data and produce auditable artifacts
+name: processed-rnaseq-review
+description: Review processed bulk RNA-seq outputs and produce auditable artifacts
 ---
 
-# Research Data Review
+# Processed RNA-seq Review
 
 The workflow is:
-inspect files -> summarize inputs -> verify analysis criteria
--> review figures -> separate findings, caveats, and review questions</pre>
+inspect files -> summarize metadata -> check QC summaries
+-> review DEG thresholds -> interpret KEGG/GO tables
+-> create figures -> write report, figure notes, and review checklist</pre>
+
+    <h3>이번 실습에서 연결되는 데이터 분석용 Skill</h3>
+    <table>
+      <thead>
+        <tr><th>Skill</th><th>이번 실습에서의 역할</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>bulk-rnaseq</strong></td>
+          <td>FASTQ를 새로 돌리는 것이 아니라, 제공된 count, DEG, QC, KEGG/GO 결과를 읽고 어떤 기준으로 검토해야 하는지 잡습니다.</td>
+        </tr>
+        <tr>
+          <td><strong>scientific-visualization</strong></td>
+          <td>Volcano, heatmap, targeted panel 같은 figure를 발표용으로 만들 때 색상, 축, export, figure note 기준을 잡습니다.</td>
+        </tr>
+        <tr>
+          <td><strong>pathway-enrichment</strong></td>
+          <td>필요할 경우 pathway/GO 결과를 다시 해석하거나, hit list와 ranking 기준을 점검하는 보조 Skill로 사용할 수 있습니다.</td>
+        </tr>
+      </tbody>
+    </table>
 
     <table>
       <thead>
@@ -1157,16 +1183,16 @@ https://github.com/K-Dense-AI/scientific-agent-skills
     <h3>Mention only</h3>
     <table>
       <thead>
-        <tr><th>도구</th><th>한 줄 설명</th></tr>
+        <tr><th>도구</th><th>한 줄 설명</th><th>출처</th></tr>
       </thead>
       <tbody>
-        <tr><td>Elicit</td><td>연구 질문 기반 literature search와 후보 논문 정리에 강한 도구</td></tr>
-        <tr><td>ResearchRabbit</td><td>관련 논문과 citation network를 시각적으로 탐색하는 도구</td></tr>
-        <tr><td>Litmaps</td><td>literature map 작성과 새 논문 monitoring에 유용한 도구</td></tr>
-        <tr><td>Consensus</td><td>논문 기반으로 특정 claim의 근거를 빠르게 확인하는 도구</td></tr>
-        <tr><td>SciSpace</td><td>논문 PDF의 어려운 문단, 표, 수식을 설명받기 좋은 도구</td></tr>
-        <tr><td>Perplexity</td><td>출처 기반 web research와 빠른 조사에 강한 AI 검색 도구</td></tr>
-        <tr><td>AlphaFold Server</td><td>생명과학 분야의 protein structure와 interaction 예측 특화 도구</td></tr>
+        <tr><td>Elicit</td><td>연구 질문 기반 literature search, paper summary, data extraction에 강한 도구</td><td><a href="https://elicit.com/">elicit.com</a></td></tr>
+        <tr><td>ResearchRabbit</td><td>seed paper를 바탕으로 관련 논문과 citation network를 시각적으로 탐색하는 도구</td><td><a href="https://www.researchrabbit.ai/">researchrabbit.ai</a></td></tr>
+        <tr><td>Litmaps</td><td>literature map 작성, 관련 논문 발견, 새 논문 monitoring에 유용한 도구</td><td><a href="https://www.litmaps.com/">litmaps.com</a></td></tr>
+        <tr><td>Consensus</td><td>peer-reviewed paper 기반으로 claim의 근거와 문헌 흐름을 빠르게 확인하는 도구</td><td><a href="https://help.consensus.app/en/articles/9922673-how-consensus-works">Consensus help</a></td></tr>
+        <tr><td>SciSpace</td><td>논문 PDF의 문단, 표, 수식, method를 질문하며 읽는 research assistant</td><td><a href="https://scispace.com/">scispace.com</a></td></tr>
+        <tr><td>Perplexity</td><td>web source citation이 붙은 빠른 조사와 배경 검색에 강한 AI 검색 도구</td><td><a href="https://www.perplexity.ai/help-center/en/articles/10352895-how-does-perplexity-work.html">Perplexity help</a></td></tr>
+        <tr><td>AlphaFold Server</td><td>AlphaFold 3 기반으로 protein, DNA, RNA 등 biomolecule interaction structure를 예측하는 도구</td><td><a href="https://alphafoldserver.com/">alphafoldserver.com</a></td></tr>
       </tbody>
     </table>
   </section>

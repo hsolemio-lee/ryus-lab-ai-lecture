@@ -82,6 +82,10 @@ window.SLIDES = [
               <p>Experimental Context, Interpretation Limit, Figure Message는 사람이 판단하고, AI는 반복 작업과 Draft 생성을 맡습니다.</p>
             </div>
           </div>
+          <div class="definition-note">
+            <strong>오늘의 예시는 시작점입니다</strong>
+            <span>Paper와 RNA-seq 예시로 시작하지만, 같은 구조는 Imaging, Proteomics, Clinical Table, Lab Meeting 준비로 확장할 수 있습니다.</span>
+          </div>
         </div>
     `,
   },
@@ -357,7 +361,7 @@ window.SLIDES = [
     html: `
 <div class="slide-inner">
           <p class="kicker">Real Case</p>
-          <h2>실제 연구 분석 작업에서 본<br>HITL</h2>
+          <h2>실제 연구자의 피드백 기반<br>작업 예시</h2>
           <div class="step-grid">
             <button data-modal="modal-research-case-step-1"><strong>1</strong><span>분석 단위 수정</span></button>
             <button data-modal="modal-research-case-step-2"><strong>2</strong><span>PCA 기준 선택</span></button>
@@ -550,7 +554,7 @@ window.SLIDES = [
 	            <p class="kicker">Project Instructions</p>
 	            <h2>AGENTS.md는 Agent에게 주는<br>프로젝트 사용설명서입니다</h2>
 	            <p class="lead">
-	              프로젝트마다 지켜야 할 규칙, 파일 구조, 실행 방법,<br>금지사항을 적어두면 Agent가 매번 같은 기준으로 일할 수 있습니다.
+	              프로젝트마다 원본 보호, 결과물 위치, 검토 기준,<br>금지사항을 적어두면 Agent가 매번 같은 기준으로 일할 수 있습니다.
 	            </p>
 	          </div>
 	          <div class="skill-stack">
@@ -582,7 +586,7 @@ window.SLIDES = [
 	          <button class="kden-skill-card" data-modal="modal-kden-bulk-rnaseq">
 	            <span>K-Dense Skill Example</span>
 	            <strong>bulk-rnaseq</strong>
-	            <small>FASTQ → QC → counts matrix → DEG → pathway enrichment → figures</small>
+	            <small>count/DEG/QC 결과 검토 → report → figure note → review checklist</small>
 	          </button>
 	        </div>
 	    `,
