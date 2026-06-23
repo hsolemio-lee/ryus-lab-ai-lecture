@@ -710,7 +710,7 @@ FastQC/trim → align/quant → counts
 	            <button class="codex-tip-card" data-modal="modal-codex-reasoning"><strong>Reasoning level</strong><span>Low, Medium, High는 생각의 깊이를 조절합니다.</span></button>
 	            <button class="codex-tip-card" data-modal="modal-codex-settings"><strong>Settings</strong><span>개인맞춤설정, privacy, usage를 먼저 확인합니다.</span></button>
 	            <button class="codex-tip-card" data-modal="modal-codex-verify"><strong>Verify</strong><span>테스트와 산출물 확인을 작업 끝에 붙입니다.</span></button>
-	            <button class="codex-tip-card" data-modal="modal-codex-browser"><strong>Browser</strong><span>HTML report와 GitHub Pages를 눈으로 검토합니다.</span></button>
+	            <button class="codex-tip-card" data-modal="modal-codex-preview"><strong>Preview</strong><span>HTML report와 GitHub Pages를 미리보기로 확인합니다.</span></button>
 	          </div>
 	        </div>
 	    `,

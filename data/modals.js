@@ -1454,10 +1454,10 @@ FastQC/trim → align/quant (STAR/Salmon)
     title: "Verify",
     body: "<p>Agent가 만든 결과를 그대로 믿지 않고, 문법 체크, 파일 생성 여부, 그림 렌더링, 표 행 수, 주요 수치 재계산 같은 검증을 요청합니다. '끝났어?'보다 '무엇으로 검증했어?'가 더 좋은 질문입니다.</p>",
   },
-  "modal-codex-browser": {
+  "modal-codex-preview": {
     kicker: "Codex Tip",
-    title: "Browser",
-    body: "<p>웹 발표자료나 HTML report는 브라우저로 직접 보면서 수정할 수 있습니다. 글자가 넘치는지, 그림이 보이는지, 버튼과 팝업이 동작하는지 확인하는 데 유용합니다.</p>",
+    title: "Preview",
+    body: "<p>Codex 앱의 미리보기는 웹 자동화보다 단순하게 이해하면 됩니다. HTML report, GitHub Pages 발표자료, 생성된 dashboard를 실제 화면으로 열어 글자가 넘치는지, 그림이 보이는지, 버튼과 팝업이 동작하는지 확인하는 기능입니다.</p>",
   },
   "modal-openai": {
     kicker: "Frontier",
