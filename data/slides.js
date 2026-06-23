@@ -669,26 +669,6 @@ FastQC/trim → align/quant → counts
         </div>
     `,
   },
-  {
-    id: "keratinocyte-data",
-    className: "slide image-slide",
-    section: "실습",
-    html: `
-<div class="slide-inner">
-          <p class="kicker">Dataset</p>
-          <h2>Keratinocyte SPF vs GF bulk RNA-seq</h2>
-          <figure class="analysis-figure">
-            <img src="assets/keratinocyte/dashboard-summary.png" alt="Keratinocyte 분석 대시보드 요약" />
-          </figure>
-          <div class="metric-row">
-            <button data-modal="modal-dataset">데이터 구조</button>
-            <button data-modal="modal-deg">DEG 요약</button>
-            <button data-modal="modal-kegg">KEGG/GO</button>
-            <button data-modal="modal-qc">QC 포인트</button>
-          </div>
-        </div>
-    `,
-  },
 	  {
 	    id: "figures",
     className: "slide image-slide",
