@@ -1420,6 +1420,19 @@ FastQC/trim → align/quant (STAR/Salmon)
     title: "Skills",
     body: "<p>Skill은 반복 작업용 매뉴얼입니다. bulk RNA-seq, figure review, literature review처럼 작업 유형이 분명할 때 Skill을 불러오면 산출물 형식과 검증 절차가 안정됩니다.</p>",
   },
+  "modal-codex-settings": {
+    kicker: "Codex Tip",
+    title: "Settings",
+    body: `
+      <p>연구자가 Codex를 쓰기 전 확인하면 좋은 설정은 크게 세 가지입니다.</p>
+      <ul>
+        <li><strong>Personalization / Custom Instructions:</strong> 선호하는 설명 톤, 언어, 산출물 형식, 검토 기준 같은 전역 선호를 적어둡니다.</li>
+        <li><strong>Privacy / Data controls:</strong> 연구 데이터, 원고, 미공개 결과를 다룰 때 계정과 workspace의 데이터 사용 설정을 확인합니다.</li>
+        <li><strong>Usage / Plan:</strong> 긴 분석이나 파일 작업은 사용량을 많이 쓸 수 있으므로 실습 전 남은 사용량과 plan을 확인합니다.</li>
+      </ul>
+      <p><strong>AGENTS.md를 대체하나요?</strong> 완전한 대체는 아닙니다. Personalization은 계정 전체에 적용되는 기본 취향이고, <code>AGENTS.md</code>는 특정 프로젝트 폴더 안에서만 적용되는 작업 규칙입니다. 연구 프로젝트에서는 둘을 함께 쓰는 편이 좋습니다.</p>
+    `,
+  },
   "modal-codex-verify": {
     kicker: "Codex Tip",
     title: "Verify",

@@ -702,13 +702,14 @@ FastQC/trim → align/quant → counts
 	<div class="slide-inner">
 	          <p class="kicker">Codex Tips</p>
 	          <h2>실습에서 바로 써먹을 Codex 기능</h2>
-	          <div class="concept-grid">
-	            <button data-modal="modal-codex-goal"><strong>/goal</strong><span>긴 작업 목표 고정</span></button>
-	            <button data-modal="modal-codex-plan"><strong>Plan mode</strong><span>실행 전 설계 확인</span></button>
-	            <button data-modal="modal-codex-files"><strong>Files & paths</strong><span>실제 폴더 읽기</span></button>
-	            <button data-modal="modal-codex-skills"><strong>Skills</strong><span>작업 매뉴얼 호출</span></button>
-	            <button data-modal="modal-codex-verify"><strong>Verify</strong><span>테스트와 산출물 확인</span></button>
-	            <button data-modal="modal-codex-browser"><strong>Browser</strong><span>화면 보며 수정</span></button>
+	          <div class="concept-grid codex-tip-grid">
+	            <button class="codex-tip-card" data-modal="modal-codex-goal"><strong>/goal</strong><span>긴 작업 목표를 대화 내내 고정합니다.</span></button>
+	            <button class="codex-tip-card" data-modal="modal-codex-plan"><strong>Plan mode</strong><span>실행 전에 작업 순서와 위험요소를 확인합니다.</span></button>
+	            <button class="codex-tip-card" data-modal="modal-codex-files"><strong>Files & paths</strong><span>PDF, 데이터 폴더, figure를 직접 context로 줍니다.</span></button>
+	            <button class="codex-tip-card" data-modal="modal-codex-skills"><strong>Skills</strong><span>반복 작업을 재사용 가능한 매뉴얼로 호출합니다.</span></button>
+	            <button class="codex-tip-card" data-modal="modal-codex-settings"><strong>Settings</strong><span>개인맞춤설정, privacy, usage를 먼저 확인합니다.</span></button>
+	            <button class="codex-tip-card" data-modal="modal-codex-verify"><strong>Verify</strong><span>테스트와 산출물 확인을 작업 끝에 붙입니다.</span></button>
+	            <button class="codex-tip-card" data-modal="modal-codex-browser"><strong>Browser</strong><span>HTML report와 GitHub Pages를 눈으로 검토합니다.</span></button>
 	          </div>
 	        </div>
 	    `,
