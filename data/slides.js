@@ -83,8 +83,8 @@ window.SLIDES = [
             </div>
           </div>
           <div class="definition-note">
-            <strong>오늘의 예시는 시작점입니다</strong>
-            <span>Paper와 RNA-seq 예시로 시작하지만, 같은 구조는 Imaging, Proteomics, Clinical Table, Lab Meeting 준비로 확장할 수 있습니다.</span>
+            <strong>가장 중요한 목표는 AI와 사람의 역할을 구분하는 것입니다</strong>
+            <span>직접 써보면서 AI가 어디까지 할 수 있고, 어떤 판단은 연구자가 맡아야 하는지 감각을 잡습니다. Paper와 RNA-seq 예시는 그 경계를 배우기 위한 시작점입니다.</span>
           </div>
         </div>
     `,
