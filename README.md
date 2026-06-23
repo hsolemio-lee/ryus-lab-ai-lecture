@@ -33,6 +33,23 @@ scripts/build-lecture-notes-pdf.js
 생성된 PDF는 `lecture-notes/ryus-lab-ai-lecture-notes.pdf`와
 `assets/downloads/ryus-lab-ai-lecture-notes.pdf`에 저장됩니다.
 
+## 강의 피드백 Google Form 생성
+
+`scripts/create-lecture-feedback-form.gs`는 Google Apps Script에서 실행하는
+폼 생성 스크립트입니다.
+
+1. <https://script.new> 접속
+2. `scripts/create-lecture-feedback-form.gs` 내용을 Apps Script 편집기에 붙여넣기
+3. 함수 선택 드롭다운에서 `createLectureFeedbackForm` 선택
+4. 실행 후 권한 승인
+5. 실행 로그에서 `Edit URL`과 `Published URL` 확인
+
+스크립트 구조 검증은 아래 명령으로 실행할 수 있습니다.
+
+```bash
+node --test scripts/create-lecture-feedback-form.test.js
+```
+
 ## GitHub Pages
 
 저장소 Settings → Pages에서 branch를 `main` 또는 `master`, folder를 `/root`로 지정하면 됩니다.

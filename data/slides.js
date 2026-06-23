@@ -837,10 +837,31 @@ FastQC/trim → align/quant → counts
     html: `
 <div class="slide-inner">
           <p class="kicker">Takeaway</p>
-          <h2>AI를 잘 쓰는 연구자는<br>더 많이 맡기는 사람이 아니라,<br>더 잘 검토하는 사람입니다</h2>
+          <h2>AI를 잘 쓰는 사람은<br>더 많이 맡기는 사람이 아니라,<br>더 잘 검토하는 사람입니다</h2>
           <p class="lead narrow">
             Context를 충분히 주고, Agent에게 일을 맡기고,<br>산출물을 근거와 도메인 지식으로 검토하는<br>workflow를 만드는 것이 핵심입니다.
           </p>
+        </div>
+    `,
+  },
+  {
+    id: "thanks",
+    className: "slide final-slide thanks-slide",
+    section: "마무리",
+    html: `
+<div class="slide-inner">
+          <p class="kicker">Feedback</p>
+          <h2>감사합니다</h2>
+          <p class="lead narrow">
+            오늘 강의가 연구 workflow에 AI를 적용하는 데<br>어떤 도움이 되었는지 짧게 남겨주세요.
+          </p>
+          <a class="survey-link" href="https://forms.gle/eLRqm5UBvtAShfGz9" target="_blank" rel="noopener noreferrer" aria-label="강의 피드백 설문 열기">
+            <span class="survey-link-copy">
+              <strong>강의 피드백 설문</strong>
+              <small>forms.gle/eLRqm5UBvtAShfGz9</small>
+            </span>
+            <span class="survey-link-arrow" aria-hidden="true">↗</span>
+          </a>
         </div>
     `,
   }

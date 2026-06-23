@@ -1945,6 +1945,59 @@ h3 {
     var(--bg);
 }
 
+.thanks-slide .slide-inner {
+  display: grid;
+  justify-items: start;
+  gap: 22px;
+}
+
+.survey-link {
+  display: inline-grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 18px;
+  width: min(100%, 520px);
+  min-height: 86px;
+  padding: 18px 20px;
+  border: 1px solid rgba(15, 118, 110, 0.28);
+  border-radius: 8px;
+  background: #fff;
+  color: var(--ink);
+  text-decoration: none;
+  box-shadow:
+    0 22px 60px rgba(15, 118, 110, 0.14),
+    10px 10px 0 rgba(29, 78, 216, 0.08);
+}
+
+.survey-link-copy {
+  display: grid;
+  gap: 5px;
+}
+
+.survey-link-copy strong {
+  font-size: clamp(1.15rem, 2vw, 1.42rem);
+  line-height: 1.12;
+}
+
+.survey-link-copy small {
+  color: var(--accent);
+  font-size: 0.94rem;
+  font-weight: 780;
+  overflow-wrap: anywhere;
+}
+
+.survey-link-arrow {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 999px;
+  background: var(--ink);
+  color: #fff;
+  font-size: 1.15rem;
+  font-weight: 900;
+}
+
 .modal-root {
   position: fixed;
   inset: 0;
