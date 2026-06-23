@@ -1413,7 +1413,7 @@ FastQC/trim → align/quant (STAR/Salmon)
   "modal-codex-files": {
     kicker: "Codex Tip",
     title: "Files & paths",
-    body: "<p>Codex는 실제 파일과 폴더를 읽을 수 있습니다. 프롬프트에 경로를 정확히 주고, '먼저 파일 목록만 보고 무거운 작업은 실행하지 말라'고 제한하면 실습이 안정적입니다.</p>",
+    body: "<p>Codex는 실제 파일과 폴더를 읽을 수 있습니다. 프롬프트에 경로를 정확히 주면, 논문 PDF, 데이터 폴더, 분석 결과물, figure 파일을 AI에게 직접 context로 제공할 수 있습니다.</p>",
   },
   "modal-codex-skills": {
     kicker: "Codex Tip",
