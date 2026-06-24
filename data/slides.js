@@ -112,7 +112,7 @@ window.SLIDES = [
     html: `
 <div class="slide-inner">
           <p class="kicker">Vocabulary</p>
-          <h2>강의 내내 쓰는<br>기본 개념</h2>
+          <h2>숙지해야 할<br>기본 개념</h2>
           <div class="concept-grid glossary-grid">
             <button data-modal="modal-llm-term">LLM</button>
             <button data-modal="modal-frontier-model-term">Frontier Model</button>
